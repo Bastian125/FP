@@ -1,15 +1,15 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'build/V46.blg'
-[35] biber-darwin:340> INFO - === Mo Apr 17, 2023, 16:59:50
-[42] Biber.pm:418> INFO - Reading 'build/V46.bcf'
-[85] Biber.pm:978> INFO - Found 2 citekeys in bib section 0
-[92] Biber.pm:4401> INFO - Processing section 0
-[97] Biber.pm:4592> INFO - Looking for bibtex file 'lit.bib' for section 0
-[168] bibtex.pm:1713> INFO - LaTeX decoding ...
-[170] bibtex.pm:1518> INFO - Found BibTeX data source '../lit.bib'
-[186] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[186] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[186] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[186] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
-[188] bbl.pm:654> INFO - Writing 'build/V46.bbl' with encoding 'UTF-8'
-[189] bbl.pm:757> INFO - Output to build/V46.bbl
+[34] biber-darwin:340> INFO - === Mo Apr 17, 2023, 17:09:28
+[40] Biber.pm:418> INFO - Reading 'build/V46.bcf'
+[84] Biber.pm:978> INFO - Found 2 citekeys in bib section 0
+[91] Biber.pm:4401> INFO - Processing section 0
+[95] Biber.pm:4592> INFO - Looking for bibtex file 'lit.bib' for section 0
+[164] bibtex.pm:1713> INFO - LaTeX decoding ...
+[166] bibtex.pm:1518> INFO - Found BibTeX data source '../lit.bib'
+[181] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[181] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[181] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[181] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[184] bbl.pm:654> INFO - Writing 'build/V46.bbl' with encoding 'UTF-8'
+[184] bbl.pm:757> INFO - Output to build/V46.bbl

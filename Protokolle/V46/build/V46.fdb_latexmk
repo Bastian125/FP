@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/V46"] 1681743588 "build/V46.bcf" "build/V46.bbl" "build/V46" 1681743599
+["biber build/V46"] 1681744166 "build/V46.bcf" "build/V46.bbl" "build/V46" 1681744753
   "../lit.bib" 1681743545 495 f2eaabddc3c8d16ac1f4d4d85343e08f ""
-  "build/V46.bcf" 1681743598 107470 de80f97eb9b7de3116ec90cea66eac59 "lualatex"
+  "build/V46.bcf" 1681744753 107470 de80f97eb9b7de3116ec90cea66eac59 "lualatex"
   (generated)
   "build/V46.bbl"
   "build/V46.blg"
-["lualatex"] 1681743596 "V46.tex" "build/V46.pdf" "V46" 1681743599
+["lualatex"] 1681744750 "V46.tex" "build/V46.pdf" "V46" 1681744753
   "../header.tex" 1681737348 3547 dc2c457c3a53d32d8eef7aeb35b8f7e3 ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/latinmodern-math.luc" 1663950883 637084 73ae50787ada38c742687c846e80a72e ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1663950913 81837 d0bcf5f32a3b606c616c15917a6a0ee8 ""
@@ -14,6 +14,8 @@
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1663950883 127327 21b358d30855ffeaf6bd405fa33b4e25 ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1663950899 128299 f09229626590eccd2e18673279cab2f9 ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc" 1663950886 127670 29912a8bd32812a61dc06450564d3756 ""
+  "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc" 1663950887 125967 cb60486328f589cb2ed6d70b6b8ed7cf ""
+  "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc" 1663950886 128146 5e3cadacf30a910fc6a114c82c296916 ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmromancaps10-regular.luc" 1663950913 120247 4cc56324cfefd0bfd106a4961e15f591 ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-bold.luc" 1663950899 128104 f5212547c5fd5c4714e361b8d8bc69b2 ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-regular.luc" 1663950899 127646 0e90f54a7279f0f814857261e31cf1db ""
@@ -28,6 +30,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf" 1255129361 111536 ae9d1b331000d544f47e5223081b7b54 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf" 1255129361 110496 b9c8767d4cc3bf3f4b21f676bf89aa78 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf" 1255129361 110400 d844cffffa1af59f9d2bb1bfdb6f1a2c ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf" 1255129361 111948 cee9e390fd6d23cfb4d6871ba2a9ee5b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf" 1255129361 108740 82741d58d9334b5242a3acb1d982bd05 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf" 1255129361 107448 a9e5b7aaaf5f74194deee407f2fd1552 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -231,16 +234,16 @@
   "/usr/local/texlive/2022/texmf-var/tex/generic/config/language.dat" 1647878956 6627 cbdbf72b83b12733508e4ca40fb3403d ""
   "/usr/local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1663950760 4783179 1523202c098ea4a674df04cafaa5698b ""
   "V46.tex" 1681737558 374 db201a5ed92a7dc404289959a7b42c90 ""
-  "build/V46.aux" 1681743598 5381 b658648f731843237013aab6283767ba "lualatex"
-  "build/V46.bbl" 1681743590 1361 bfbea8c6121cee38ca4e56844a627975 "biber build/V46"
-  "build/V46.run.xml" 1681743598 2389 8f19052b21b9f3c4cc7d380160909af1 "lualatex"
-  "build/V46.toc" 1681743598 680 9f6733ca81ab80dc7c82cbe2cb17b9b3 "lualatex"
+  "build/V46.aux" 1681744753 5470 b55121e191c80d391f7ce513db5e1343 "lualatex"
+  "build/V46.bbl" 1681744168 1361 bfbea8c6121cee38ca4e56844a627975 "biber build/V46"
+  "build/V46.run.xml" 1681744753 2389 8f19052b21b9f3c4cc7d380160909af1 "lualatex"
+  "build/V46.toc" 1681744753 680 f74d72fd0fc9bd56153b26b6c948584e "lualatex"
   "build/plot.pdf" 1681737721 12551 8eaa4645be1399aef52ce74f3a24d56b ""
   "content/Halbleiter.png" 1681740006 53823 3414f640da9a65ffacb81204e6c5c847 ""
   "content/auswertung.tex" 1681731622 180 979545206919101e3933038b45e3411d ""
   "content/diskussion.tex" 1681731622 44 402cc6c9751419c0f1a455b2d4ed1f51 ""
   "content/durchfuehrung.tex" 1681731622 50 21282d8bb0cc9b2f3316d3739203a5a9 ""
-  "content/theorie.tex" 1681743580 3259 05f458108381142c23ec34f21bd5ffbb ""
+  "content/theorie.tex" 1681744740 4230 a29ebd92142698804a3faa7843cf755a ""
   (generated)
   "build/V46.aux"
   "build/V46.bcf"

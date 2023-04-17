@@ -63,4 +63,16 @@ Die Ursache liegt dabei darin, dass Phasengeschwindigkeiten für links- und rech
 Hierbei kann linear polarisiertes Licht als Überlagerung von links- und rechtszirkular polarisiertes Licht verstanden werden, sodass
 beim Durchqueren des Mediums aufgrund der unterschiedlichen Geschwindigkeiten eine Rotation der Polarisationsrichtung stattfindet. \cite{V46Anhang}
 
-Durch anlegen eines B-Feldes  
+Durch anlegen eines B-Feldes parallel zur Ausbreitungsrichtung des Lichtes kann in optisch inaktiven Medien die selbe Rotation erzeugt werden, dies
+wird auch als Faraday Effekt beschrieben. Der physikalische Hintergrund ist hierbei, dass die Leitungselektronen durch das Magnetfeld auf Kreisbahnen
+gezwungen werden. Es lässt sich eine Formel herleiten, die die Rotation der Polarisationsebene in Abhängigkeit der Wellenlänge angibt:
+
+\begin{equation}
+    \theta(\lambda)=\frac{\text{e}_0^3}{8\pi^2\epsilon_0c^3}\frac{1}{{m^*}^2}\frac{NBL}{n}\lambda^2\,
+    \label{eq:theta}
+\end{equation}
+
+Sind alle vorkommenden Größen bekannt, also das Magnetfeld $B$, die Ladungsträgerdichte $n$ und die Länge der Probe $L$, kann die effektive Masse
+$m^*$ durch umstellen von \eqref{eq:theta} berechnet werden.
+Aus praktischen Gründen wird mit $\theta_\text{frei}$ gerechnet, hier wird der Rotationswinkel $\theta$ auf die Länge der Probe normiert, indem dadurch
+geteilt wird.
