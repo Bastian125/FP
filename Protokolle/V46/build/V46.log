@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.23)  17 APR 2023 17:19
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.9.23)  17 APR 2023 18:20
  restricted system commands enabled.
 **V46.tex
 (./V46.tex
@@ -1380,52 +1380,58 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
  [2
 
 ] (./content/theorie.tex
-<content/Halbleiter.png, id=39, 421.575pt x 387.4475pt>
+<content/Halbleiter.png, id=43, 421.575pt x 387.4475pt>
 File: content/Halbleiter.png Graphic file (type png)
 <use content/Halbleiter.png>
 Package luatex.def Info: content/Halbleiter.png  used on input line 26.
 (luatex.def)             Requested size: 247.67212pt x 227.62204pt.
- [3<./content/Halbleiter.png>]) (./content/durchfuehrung.tex) (./content/auswertung.tex
-<plot.pdf, id=53, 417.7206pt x 258.0049pt>
+ [3<./content/Halbleiter.png>]) (./content/durchfuehrung.tex [4
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.2.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.2.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.2.1'
+]
+<content/Aufbau.png, id=69, 766.865pt x 526.96875pt>
+File: content/Aufbau.png Graphic file (type png)
+<use content/Aufbau.png>
+Package luatex.def Info: content/Aufbau.png  used on input line 14.
+(luatex.def)             Requested size: 331.2433pt x 227.62204pt.
+ [5<./content/Aufbau.png>]) (./content/auswertung.tex
+<plot.pdf, id=81, 417.7206pt x 258.0049pt>
 File: plot.pdf Graphic file (type pdf)
 <use plot.pdf>
 Package luatex.def Info: plot.pdf  used on input line 6.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
- [4
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.2.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.2.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.2.1'
-]) (./content/diskussion.tex)
+) (./content/diskussion.tex [6])
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [5<build/plot.pdf>] (./build/V46.aux)
+ [7<build/plot.pdf>] (./build/V46.aux)
 Package rerunfilecheck Info: File `V46.aux' has not changed.
-(rerunfilecheck)             Checksum: B55121E191C80D391F7CE513DB5E1343;5470.
+(rerunfilecheck)             Checksum: 63A380FFCC431C5539A82FD014ED9C19;6941.
 Package rerunfilecheck Info: File `V46.toc' has not changed.
-(rerunfilecheck)             Checksum: F74D72FD0FC9BD56153B26B6C948584E;680.
+(rerunfilecheck)             Checksum: 26373B15FE2FB0E22F99CD07A8E2BFB0;847.
 Package logreq Info: Writing requests to 'V46.run.xml'.
 
 \openout1 = V46.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 38258 strings out of 477356
+ 38283 strings out of 477356
  100000,1977958 words of node,token memory allocated
  680 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 22 attribute, 76 glue_spec, 13 attribute_list, 1 write nodes
-   avail lists: 1:3,2:595,3:142,4:73,5:411,6:32,7:5341,8:49,9:422,10:17,11:628,12:1
- 58235 multiletter control sequences out of 65536+600000
+   avail lists: 1:3,2:604,3:153,4:81,5:423,6:35,7:5585,8:49,9:402,10:17,11:657,12:1
+ 58248 multiletter control sequences out of 65536+600000
  88 fonts using 33252543 bytes
  113i,8n,117p,10616b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on V46.pdf (5 pages, 104139 bytes).
+Output written on V46.pdf (7 pages, 168213 bytes).
 
-PDF statistics: 203 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 131072)
- 65 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 231 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 131072)
+ 81 words of extra memory for PDF output out of 10000 (max. 100000000)
 

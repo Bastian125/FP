@@ -470,6 +470,9 @@ INPUT /Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/
 INPUT /Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
+INPUT ./content/Aufbau.png
+INPUT ./content/Aufbau.png
+INPUT ./content/Aufbau.png
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
 INPUT build/plot.pdf

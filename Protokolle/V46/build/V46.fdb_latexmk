@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/V46"] 1681744166 "build/V46.bcf" "build/V46.bbl" "build/V46" 1681744753
+["biber build/V46"] 1681745763 "build/V46.bcf" "build/V46.bbl" "build/V46" 1681748432
   "../lit.bib" 1681743545 495 f2eaabddc3c8d16ac1f4d4d85343e08f ""
-  "build/V46.bcf" 1681744753 107470 de80f97eb9b7de3116ec90cea66eac59 "lualatex"
+  "build/V46.bcf" 1681748432 107586 7d583327d9ac6fdf01cc9220c161097b "lualatex"
   (generated)
   "build/V46.bbl"
   "build/V46.blg"
-["lualatex"] 1681744750 "V46.tex" "build/V46.pdf" "V46" 1681744753
+["lualatex"] 1681748430 "V46.tex" "build/V46.pdf" "V46" 1681748432
   "../header.tex" 1681737348 3547 dc2c457c3a53d32d8eef7aeb35b8f7e3 ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/latinmodern-math.luc" 1663950883 637084 73ae50787ada38c742687c846e80a72e ""
   "/Users/theo/Library/texlive/2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1663950913 81837 d0bcf5f32a3b606c616c15917a6a0ee8 ""
@@ -234,16 +234,17 @@
   "/usr/local/texlive/2022/texmf-var/tex/generic/config/language.dat" 1647878956 6627 cbdbf72b83b12733508e4ca40fb3403d ""
   "/usr/local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1663950760 4783179 1523202c098ea4a674df04cafaa5698b ""
   "V46.tex" 1681737558 374 db201a5ed92a7dc404289959a7b42c90 ""
-  "build/V46.aux" 1681744753 5470 b55121e191c80d391f7ce513db5e1343 "lualatex"
-  "build/V46.bbl" 1681744168 1361 bfbea8c6121cee38ca4e56844a627975 "biber build/V46"
-  "build/V46.run.xml" 1681744753 2389 8f19052b21b9f3c4cc7d380160909af1 "lualatex"
-  "build/V46.toc" 1681744753 680 f74d72fd0fc9bd56153b26b6c948584e "lualatex"
+  "build/V46.aux" 1681748432 6941 63a380ffcc431c5539a82fd014ed9c19 "lualatex"
+  "build/V46.bbl" 1681745765 1661 f9dbebaf2eb134dd7085d8773c3ed29c "biber build/V46"
+  "build/V46.run.xml" 1681748432 2389 8f19052b21b9f3c4cc7d380160909af1 "lualatex"
+  "build/V46.toc" 1681748432 847 26373b15fe2fb0e22f99cd07a8e2bfb0 "lualatex"
   "build/plot.pdf" 1681737721 12551 8eaa4645be1399aef52ce74f3a24d56b ""
+  "content/Aufbau.png" 1681745707 79571 1174890d5d61fa8e91fc1e61c314b462 ""
   "content/Halbleiter.png" 1681740006 53823 3414f640da9a65ffacb81204e6c5c847 ""
   "content/auswertung.tex" 1681731622 180 979545206919101e3933038b45e3411d ""
   "content/diskussion.tex" 1681731622 44 402cc6c9751419c0f1a455b2d4ed1f51 ""
-  "content/durchfuehrung.tex" 1681731622 50 21282d8bb0cc9b2f3316d3739203a5a9 ""
-  "content/theorie.tex" 1681744740 4230 a29ebd92142698804a3faa7843cf755a ""
+  "content/durchfuehrung.tex" 1681748423 3426 75f101a8fd877a3b319178b2634c1623 ""
+  "content/theorie.tex" 1681746496 4250 f7052656151332b531c7dfda70795ad4 ""
   (generated)
   "build/V46.aux"
   "build/V46.bcf"

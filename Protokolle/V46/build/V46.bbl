@@ -44,6 +44,15 @@
       \verb https://slideplayer.org/slide/885648/
       \endverb
     \endentry
+    \entry{V46}{manual}{}
+      \list{organization}{1}{%
+        {TU Dortmund, Fakultät Physik}%
+      }
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labeltitlesource}{title}
+      \field{title}{V46-Faraday-Effekt an Halbleitern}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
