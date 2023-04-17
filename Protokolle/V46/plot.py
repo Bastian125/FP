@@ -1,21 +1,23 @@
+# Imports
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+# B-Feld Auswertung
+x, B = np.genfromtxt('data/bfeld.txt', unpack=True)
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
+# Plot 1
+plt.plot(x, B, 'x', label='Messwerte')
+plt.xlabel('$x/$mm')
+plt.ylabel('$B/$mT')
+plt.xlim(65, 115)
+plt.ylim(0)
+plt.grid()
+plt.legend()
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
-
-# in matplotlibrc leider (noch) nicht möglich
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot.pdf')
+plt.savefig('build/plot1.pdf')
+
+# undotiert Auswertung
+l1, a11, g11, a12, g12 = np.genfromtxt('data/undotiert.txt', unpack=True)
+d1 = a11 + g11/60
+d2 = a12 + g12/60
