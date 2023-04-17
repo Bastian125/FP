@@ -19,5 +19,12 @@ plt.savefig('build/plot1.pdf')
 
 # undotiert Auswertung
 l1, a11, g11, a12, g12 = np.genfromtxt('data/undotiert.txt', unpack=True)
-d1 = a11 + g11/60
-d2 = a12 + g12/60
+# Daten von Grad+Winkelminuten in Radiant umrechnen
+d1 = (a11 + g11/60)*(np.pi)/180
+d2 = (a12 + g12/60)*(np.pi)/180
+
+# Differenz berechnen
+ld1 = np.abs(d1-d2)
+
+# als txt speichern
+np.savetxt('winkeldiff1.txt', ld1)
