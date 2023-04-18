@@ -44,9 +44,23 @@ zu können, wurden um das Maximum mehr Messwerte aufgenommen.
 \end{figure}
 
 \subsection{Bestimmung der effektiven Masse}
+Es wird Licht mit neun unterschiedlichen Wellenlängen im Bereich von $\SI{1,06}{\micro\meter}$ bis
+$\SI{2,65}{\micro\meter}$ verwendet, um die Faraday-Rotation zu bestimmen. Die drei Gallium-Arsenid-Proben haben
+die Parameter
+\begin{align*}
+  d_{\symup{hochrein}} &= \SI{5,11}{\milli\meter}\symup{,} \\
+  d_{N=1,2 \cdot 10^{18} \si{cm}^{-3}} &= \SI{1,36}{\milli\meter}\,\symup{ und} \\
+  d_{N=2,8 \cdot 10^{18} \si{cm}^{-3}} &= \SI{1,296}{\milli\meter}\,\symup{.}
+\end{align*}
+Dabei ist die erste Probe undotiert und anderen beiden sind mit einer Dotierkonzentration $N$ n-dotiert.
+Die am Goniometer abgelesenen Winkel wurden zur besseren Lesbarkeit in Grad umgerechnet. Weiterhin wurde die
+Winkeldifferenzen $\theta = |\theta_{1} - \theta_{2}|$ in Radianten umgerechnet und mit Hilfe der oben angegebenen
+Parameter zu $\frac{\theta}{d}$ normiert.
+Die entsprechenden Messwerte und bestimmten Größen sind in \autoref{tab:m1}, 3 und 4 zu finden.
 \begin{table}
   \centering
   \caption{Messwerte und die daraus bestimmten Größen $\theta$ und $\theta/d$ für die undotiert GaAs-Probe.}
+  \label{tab:m1}
   \begin{tabular}{c c c c c}
     \toprule
     $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/\symup{rad}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
@@ -68,6 +82,7 @@ zu können, wurden um das Maximum mehr Messwerte aufgenommen.
   \centering
   \caption{Messwerte und die daraus bestimmten Größen $\theta$ und $\theta/d$ für die n-dotierte GaAs-Probe
   mit $N=1,2 \cdot 10^{18} \si{cm}^{-3}$.}
+  \label{tab:m2}
   \begin{tabular}{c c c c c}
     \toprule
     $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/\symup{rad}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
@@ -89,6 +104,7 @@ zu können, wurden um das Maximum mehr Messwerte aufgenommen.
   \centering
   \caption{Messwerte und die daraus bestimmten Größen $\theta$ und $\theta/d$ für die n-dotierte GaAs-Probe
   mit $N=2,8 \cdot 10^{18} \si{cm}^{-3}$.}
+  \label{tab:m3}
   \begin{tabular}{c c c c c}
     \toprule
     $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/\symup{rad}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
@@ -105,3 +121,10 @@ zu können, wurden um das Maximum mehr Messwerte aufgenommen.
     \bottomrule
   \end{tabular}
 \end{table}
+Außerdem wird in \autoref{fig:norm} die normierte Faraday-Rotation $\theta/d$ gegen $\lambda^2$ aufgetragen.
+\begin{figure}
+  \label{fig:norm}
+  \includegraphics{plot1.pdf}
+  \caption{Die normierte Faraday-Rotation $\theta/d$ gegen die quadrierte Wellenlänge $\lambda^2$ für die
+  hochreine und den beiden n-dotierten GaAs-Proben.}
+\end{figure}
