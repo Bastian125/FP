@@ -1,6 +1,7 @@
 # Imports
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.ticker as ticker
 
 # B-Feld Auswertung
 x, B = np.genfromtxt('data/bfeld.txt', unpack=True)
@@ -94,4 +95,14 @@ plt.grid()
 plt.legend()
 plt.tight_layout()
 plt.savefig('build/plot1.pdf')
+plt.close()
+
+# Differenz plotten
+
+plt.plot((l1*1e-6)**2, ld2_n - ld1_n, 'x')
+plt.plot((l1*1e-6)**2, ld3_n - ld1_n, 'x')
+
+plt.grid()
+plt.legend()
+plt.savefig('build/plot2.pdf')
 plt.close()
