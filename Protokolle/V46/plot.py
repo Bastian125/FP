@@ -15,7 +15,7 @@ plt.grid()
 plt.legend()
 
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot1.pdf')
+plt.savefig('build/plot.pdf')
 plt.close()
 
 # undotiert Auswertung
@@ -74,5 +74,5 @@ plt.xlabel(r'$\lambda^2 \:/\:\mathrm{µm}^2$')
 plt.ylabel(r'$\frac{\Theta}{d} \:/\:$rad$\mathrm{m}^{-1}}$')
 plt.grid()
 plt.legend()
-plt.savefig('build/plot2.pdf')
+plt.savefig('build/plot1.pdf')
 plt.close()
