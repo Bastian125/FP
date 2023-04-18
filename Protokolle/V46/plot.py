@@ -14,7 +14,7 @@ plt.ylim(0)
 plt.grid()
 plt.legend()
 
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.tight_layout()
 plt.savefig('build/plot.pdf')
 plt.close()
 
@@ -27,8 +27,9 @@ d2 = (a12 + g12/60)*(np.pi)/180
 # Differenz berechnen
 ld1 = np.abs(d1-d2)
 # Normieren
-d1 = 5.1*10**(-3)
-ld1_n = ld1/d1
+dp1 = 5.1*10**(-3)
+ld1_n = ld1/dp1
+
 
 # als txt speichern
 np.savetxt('data/winkeldiff1.txt', ld1_n)
@@ -43,8 +44,8 @@ d4 = (a22 + g22/60)*(np.pi)/180
 ld2 = np.abs(d3-d4)
 
 # Normieren
-d2 = 5.1*10**(-3)
-ld2_n = ld2/d2
+dp2 = 5.1*10**(-3)
+ld2_n = ld2/dp2
 
 # als txt speichern
 np.savetxt('data/winkeldiff2.txt', ld2_n)
@@ -58,21 +59,39 @@ d6 = (a32 + g32/60)*(np.pi)/180
 # Differenz berechnen
 ld3 = np.abs(d5-d6)
 # Normieren
-d3 = 5.1*10**(-3)
-ld3_n = ld3/d3
+dp3 = 5.1*10**(-3)
+ld3_n = ld3/dp3
 
 # als txt speichern
 np.savetxt('data/winkeldiff3.txt', ld3_n)
+
+# ld1 bis ld6 in Grad als txt abspeichern
+np.savetxt('data/d1.txt', d1*180/np.pi)
+np.savetxt('data/d2.txt', d2*180/np.pi)
+np.savetxt('data/d3.txt', d3*180/np.pi)
+np.savetxt('data/d4.txt', d4*180/np.pi)
+np.savetxt('data/d5.txt', d5*180/np.pi)
+np.savetxt('data/d6.txt', d6*180/np.pi)
+
+# theta 1 bis 3
+np.savetxt('data/theta1.txt', ld1)
+np.savetxt('data/theta2.txt', ld2)
+np.savetxt('data/theta3.txt', ld3)
+
+# theta/d 1 bis 3
+np.savetxt('data/thetad1.txt', ld1_n)
+np.savetxt('data/thetad2.txt', ld2_n)
+np.savetxt('data/thetad3.txt', ld3_n)
 
 # Plotte theta/d gegen lambda^2
 plt.plot(l1**2, ld1_n, 'x', label='GaAs undotiert')
 plt.plot(l2**2, ld2_n, 'x', label='GaAs n-dotiert 1')
 plt.plot(l3**2, ld3_n, 'x', label='GaAs n-dotiert 2')
 
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.xlabel(r'$\lambda^2 \:/\:\mathrm{µm}^2$')
 plt.ylabel(r'$\frac{\Theta}{d} \:/\:$rad$\mathrm{m}^{-1}}$')
 plt.grid()
 plt.legend()
+plt.tight_layout()
 plt.savefig('build/plot1.pdf')
 plt.close()

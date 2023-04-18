@@ -1,12 +1,107 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Bestimmung der maximalen magnetischen Kraftflussdichte}
+Die mit Hilfe einer Hallsonde bestimmten Messwerte sind in \autoref{tab:bfeld} eingetragen und wurden in
+\autoref{fig:plot} graphisch dargestellt. Die maximale Feldstärke lässt sich zu $\SI{422}{\milli\tesla}$
+bei $x=\SI{89}{\milli\meter}$ oder $x=\SI{90}{\milli\meter}$ ablesen. Um die das Maximum verlässlich ablesen
+zu können, wurden um das Maximum mehr Messwerte aufgenommen.
+
+\begin{table}
+  \centering
+  \caption{Mit einer Hallsonde im Luftspalt gemessene Feldstärke zur Bestimmung des maximalen Feldstärkewerts.}
+  \label{tab:bfeld}
+  \begin{tabular}{c c}
+    \toprule
+    $x/\si{\milli\meter}$ & $B/\si{\milli\tesla}$\\
+    \midrule
+    $ 70$ & $ 14$ \\
+    $ 75$ & $ 72$ \\
+    $ 80$ & $309$ \\
+    $ 85$ & $415$ \\
+    $ 86$ & $416$ \\
+    $ 87$ & $419$ \\
+    $ 88$ & $421$ \\
+    $ 89$ & $422$ \\
+    $ 90$ & $422$ \\
+    $ 91$ & $420$ \\
+    $ 92$ & $416$ \\
+    $ 93$ & $411$ \\
+    $ 94$ & $403$ \\
+    $ 95$ & $396$ \\
+    $100$ & $212$ \\
+    $105$ & $ 41$ \\
+    $110$ & $  9$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 \begin{figure}
   \centering
   \includegraphics{plot.pdf}
-  \caption{Plot.}
+  \caption{Die magnetische Feldstärke $B$ in $mT$ gegen die Koordinate $x$ in $mm$ aufgetragen.}
   \label{fig:plot}
 \end{figure}
 
+\subsection{Bestimmung der effektiven Masse}
+\begin{table}
+  \centering
+  \caption{Messwerte und die daraus bestimmten Größen $\theta$ und $\theta/d$ für die undotiert GaAs-Probe.}
+  \begin{tabular}{c c c c c}
+    \toprule
+    $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/\symup{rad}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
+    \midrule
+    $1,06 $ & $41,13$ & $60,50$ & $0,3380$ & $66,27$ \\
+    $1,29 $ & $57,00$ & $41,16$ & $0,2763$ & $54,18$ \\
+    $1,45 $ & $45,16$ & $58,08$ & $0,2254$ & $44,20$ \\
+    $1,72 $ & $43,50$ & $52,66$ & $0,1599$ & $31,37$ \\
+    $1,96 $ & $40,00$ & $46,60$ & $0,1151$ & $22,58$ \\
+    $2,156$ & $45,58$ & $40,50$ & $0,0887$ & $17,39$ \\
+    $2,34 $ & $28,78$ & $33,25$ & $0,0779$ & $15,28$ \\
+    $2,51 $ & $24,38$ & $28,00$ & $0,0631$ & $12,37$ \\
+    $2,65 $ & $32,89$ & $37,56$ & $0,0814$ & $15,97$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-Siehe \autoref{fig:plot}!
+\begin{table}
+  \centering
+  \caption{Messwerte und die daraus bestimmten Größen $\theta$ und $\theta/d$ für die n-dotierte GaAs-Probe
+  mit $N=1,2 \cdot 10^{18} \si{cm}^{-3}$.}
+  \begin{tabular}{c c c c c}
+    \toprule
+    $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/\symup{rad}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
+    \midrule
+    $1,06 $ & $23,16$ & $18,00$ & $0,0901$ & $17,68$ \\
+    $1,29 $ & $24,56$ & $15,83$ & $0,1524$ & $29,88$ \\
+    $1,45 $ & $25,83$ & $27,00$ & $0,2036$ & $39,92$ \\
+    $1,72 $ & $27,00$ & $18,83$ & $0,1425$ & $27,94$ \\
+    $1,96 $ & $27,00$ & $27,33$ & $0,5817$ & $11,40$ \\
+    $2,156$ & $23,00$ & $30,08$ & $0,1236$ & $24,24$ \\
+    $2,34 $ & $21,99$ & $29,16$ & $0,1250$ & $24,52$ \\
+    $2,51 $ & $29,41$ & $21,66$ & $0,1352$ & $26,52$ \\
+    $2,65 $ & $29,99$ & $20,41$ & $0,1672$ & $32,79$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \centering
+  \caption{Messwerte und die daraus bestimmten Größen $\theta$ und $\theta/d$ für die n-dotierte GaAs-Probe
+  mit $N=2,8 \cdot 10^{18} \si{cm}^{-3}$.}
+  \begin{tabular}{c c c c c}
+    \toprule
+    $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/\symup{rad}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
+    \midrule
+    $1,06 $ & $16,69$ & $4,11$  & $0,2196$ & $43,06$ \\
+    $1,29 $ & $14,90$ & $6,00$  & $0,1553$ & $30,45$ \\
+    $1,45 $ & $13,30$ & $6,81$  & $0,1131$ & $22,18$ \\
+    $1,72 $ & $15,41$ & $8,16$  & $0,1265$ & $24,81$ \\
+    $1,96 $ & $20,66$ & $1,106$ & $0,1675$ & $32,85$ \\
+    $2,156$ & $23,38$ & $2,705$ & $0,0639$ & $12,54$ \\
+    $2,34 $ & $22,75$ & $2,838$ & $0,0983$ & $19,27$ \\
+    $2,51 $ & $24,00$ & $2,900$ & $0,0872$ & $17,11$ \\
+    $2,65 $ & $26,05$ & $3,058$ & $0,0791$ & $15,51$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
