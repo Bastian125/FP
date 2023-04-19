@@ -46,7 +46,7 @@ Vergleicht man dies mit einem harmonischen Oszillator mit
 so fällt auf, dass sich der zweite Koeffizient der Taylorentwicklung als effektive Masse $m_i^*$ interpretieren lässt:
     
 \begin{equation}
-    m_i^*:=\frac{\hbar^2}{\left(\frac{\partial\epsilon^2}{\partial k_i^2}\right)_{k=0}}\,
+    m_i^*:=\frac{\hbar^2}{\left(\frac{\partial\epsilon^2}{\partial k_i^2}\right)_{k=0}}
     \notag
 \end{equation}
 
@@ -55,25 +55,71 @@ $m^*$ definiert werden, die sich eignet, um die Dynamik der Leitungselektronen z
 lassen sich die Leitungselektronen somit als freie Elektronen beschreiben, deren Wechselwirkung mit dem Kristallgitter
 über die veränderte Masse $m^*$ beschrieben wird.
 
-\subsection{Zirkulare Doppelbrechung und Faraday Effekt}
+\subsection{Zirkulare Doppelbrechung}
 \label{sec:Faraday}
 
 In optisch aktiven Medien kann zirkuläre Doppelbrechung auftreten. Diese beschreibt die
-Fähigkeit eines Kristalles, die Polarisationsebene eines linear polarisierten Lichtstrahles bei der Transmission zu drehen.
+Fähigkeit eines Kristalles, die Polarisationsebene eines linear polarisierten Lichtstrahles bei der Transmission zu drehen, das Konzept ist in 
+\autoref{fig:rotation} dargestellt.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[height=6cm]{content/rotation.png}
+    \caption{Zirkuläre Polarisation in einem Kristall. \cite{V46Anhang}}
+    \label{fig:rotation}
+\end{figure}
+
 Die Ursache liegt dabei darin, dass Phasengeschwindigkeiten für links- und rechtszirkular polarisiertes Licht in dem Kristallmedium verschieden sind.
-Hierbei kann linear polarisiertes Licht als Überlagerung von links- und rechtszirkular polarisiertes Licht verstanden werden, sodass
-beim Durchqueren des Mediums aufgrund der unterschiedlichen Geschwindigkeiten eine Rotation der Polarisationsrichtung stattfindet. \cite{V46Anhang}
+Hierbei kann linear polarisiertes Licht gemäß \eqref{eq:supo} als Überlagerung von links- und rechtszirkular polarisiertes Licht verstanden werden.
+\begin{equation}
+    E(z)=\frac{1}{2}(E_\text{L}(z)+E_\text{R}(z))
+    \label{eq:supo}
+\end{equation}
+Beim Durchqueren des Mediums findet nun aufgrund der unterschiedlichen Geschwindigkeiten eine Rotation der Polarisationsrichtung statt.
+Der Rotationswinkel in Abhängigkeit der Phasengeschwindigkeiten lautet
+\begin{equation}
+    \theta = \frac{L\omega}{2}(\frac{1}{v_{\text{Ph}_r}}-\frac{1}{v_{\text{Ph}_l}})
+    \notag
+\end{equation}
+beziehungsweise über die Brechungsindices ausgedrückt
+\begin{equation}
+    \theta = \frac{L\omega}{2}(\frac{1}{n_{\text{r}}}-\frac{1}{n_{\text{l}}}).
+    \label{eq:winkel}
+\end{equation}
+Dabei ist $L$ die Länge des Kristalls und $\omega$ die Kreisfrequenz der elektromagnetischen Welle.
+Die unterschiedlichen Phasengeschwindigkeiten kommen aufgrund der Dipolmomente der Atome auf den Gitterplätzen im Kristall sowie
+der Wechselwirkung der Bandelektronen mit diesen zustande. Deshalb kann der in \eqref{eq:winkel} berechnete Winkel mithilfe einiger
+Umformungen über die Suszeptibilität ausgedrückt werden:
+\begin{equation}
+    \theta = \frac{L\omega}{2cn}\chi_{xy}
+    \label{eq:thetatensor}
+\end{equation}
+
+\subsection{Faraday Effekt}
 
 Durch anlegen eines B-Feldes parallel zur Ausbreitungsrichtung des Lichtes kann in optisch inaktiven Medien die selbe Rotation erzeugt werden, dies
 wird auch als Faraday Effekt beschrieben. Der physikalische Hintergrund ist hierbei, dass die Leitungselektronen durch das Magnetfeld auf Kreisbahnen
-gezwungen werden. Es lässt sich eine Formel herleiten, die die Rotation der Polarisationsebene in Abhängigkeit der Wellenlänge angibt:
-
+gezwungen werden und Dipolmomente erzeugen.
+Die Tensorkomponente $\chi_{xy}$ aus \eqref{eq:thetatensor} ergibt sich nun zu
+\begin{equation}
+    \chi_{xy} = \frac{N\text{e}^3\omega B}{\epsilon_0\left(\left(-m\omega^2+K\right)^2-\left(\text{e}\omega B\right)^2\right)}
+    \label{eq:tensor}
+\end{equation}
+Dabei beschreibt $K$ die Bindungskonstante der Elektronen an ihre Umgebung.
+Einsetzen von \eqref{eq:tensor} in \eqref{eq:thetatensor} liefert die Beziehung
+\begin{equation}
+    \theta=\frac{\text{e}_0^3\omega^2NBL}{2\epsilon_0cm^2\left(\left(-\omega^2+\omega_0^2\right)^2-\left(\omega_{\text{c}}\omega\right)^2\right)n}
+    \label{eq:ha}
+\end{equation}
+wobei $\sqrt{\frac{K}{m}}$ als Resonanzfrequenz $\omega_0$ definiert wurde sowie $\omega_{\text{c}} = \frac{\text{e}B}{m}$ für die Zyklotronfrequenz steht.
+Zuletzt wird angenommen, dass die Messfrequenz $\omega$ wesentlich kleiner als $\omega_0$ ist, sowie dass $\omega_0>\omega_{\text{c}}$ gilt. Dann vereinfacht
+sich \eqref{eq:ha} zu der Formel
 \begin{equation}
     \theta(\lambda)=\frac{\text{e}_0^3}{8\pi^2\epsilon_0c^3}\frac{1}{{m^*}^2}\frac{NBL}{n}\lambda^2\,
     \label{eq:theta}
 \end{equation}
-
-Sind alle vorkommenden Größen bekannt, also das Magnetfeld $B$, die Ladungsträgerdichte $n$ und die Länge der Probe $L$, kann die effektive Masse
+welche die Rotation der Polarisationsebene in Abhängigkeit der Wellenlänge angibt.
+Sind alle vorkommenden Größen bekannt, also das Magnetfeld $B$, die Ladungsträgerdichte $N$ und die Länge der Probe $L$, kann die effektive Masse
 $m^*$ durch umstellen von \eqref{eq:theta} berechnet werden.
 Aus praktischen Gründen wird mit $\theta_\text{frei}$ gerechnet, hier wird der Rotationswinkel $\theta$ auf die Länge der Probe normiert, indem dadurch
 geteilt wird.
