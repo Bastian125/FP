@@ -120,14 +120,14 @@ plt.plot(l1**2, ld2_n - ld1_n, 'x', label=r'GaAs n-dotiert, $N=1,2\cdot 10^{18}\
 plt.plot(l1**2, ld3_n - ld1_n, 'x', label=r'GaAs n-dotiert, $N=2,8\cdot 10^{18}\,cm^{-3}$')
 plt.plot(
     l1**2,
-    params[0] * l1**2 + params[1],
-    label=r'Lineare Regression, $N=2,8\cdot 10^{18}\,cm^{-3}$',
+    params[0] * l1**2 + params[1], 'b-',
+    label=r'Lineare Regression, $N=1,2\cdot 10^{18}\,cm^{-3}$',
     linewidth=2,
 )
 plt.plot(
     l1**2,
-    params1[0] * l1**2 + params1[1],
-    label=r'GaAs n-dotiert, $N=2,8\cdot 10^{18}\,cm^{-3}$',
+    params1[0] * l1**2 + params1[1], color='orange',
+    label=r'Lineare Regression, $N=2,8\cdot 10^{18}\,cm^{-3}$',
     linewidth=2,
 )
 plt.xlabel(r'$\lambda^2 \:/\:\mathrm{µm}^2$')
