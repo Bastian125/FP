@@ -124,7 +124,8 @@ Die entsprechenden Messwerte und bestimmten Größen sind in \autoref{tab:m1}, 3
 Außerdem wird in \autoref{fig:norm} die normierte Faraday-Rotation $\theta/d$ gegen $\lambda^2$ aufgetragen.
 In wird die Differenz der normierten Faraday-Rotation der hochreinen GaAs-Probe und den n-dotierten GaAs-Proben
 gegen das Quadrat der Wellenlänge aufgetragen. Um die effektive Masse zu bestimmen, werden zwei Ausgleichsgeraden
-bestimmt.
+für die die Differenzen der normierten Faraday-Rotationen der n-dotierten GaAs-Proben mit der hocheinen bestimmt.
+Der entsprechende Plot ist in \autoref{fig:diff} finden.
 \begin{figure}[hbt!]
   \label{fig:norm}
   \includegraphics{plot1.pdf}
@@ -138,3 +139,17 @@ bestimmt.
   \caption{Die normierte Faraday-Rotation $\theta/d$ gegen die quadrierte Wellenlänge $\lambda^2$ für die
   hochreine und den beiden n-dotierten GaAs-Proben.}
 \end{figure}
+ lässt sich umstellen zu
+ \begin{align*}
+  m^{*} = \sqrt{\frac{e_0^3}{8\pi^2 \varepsilon_0 c^3} \frac{N B_\text{max}}{n} \frac{1}{a}}
+  \end{align*}
+Die Parameter der linearen Regression bestimmen sich für die $N=1,2\cdot 10^{18}\,cm^{-3}$ zu
+\begin{align*}
+  a &= 10,53 \pm 1,81 \\
+  b &= -51,21 \pm 7,94
+\end{align*}
+und für die $N=2,8\cdot 10^{18}\,cm^{-3}$ zu
+\begin{align*}
+  a &= 4,96 \pm 1,42 \\
+  b &= -26,24 \pm 6,23
+\end{align*}

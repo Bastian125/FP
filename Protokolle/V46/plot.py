@@ -1,6 +1,7 @@
 # Imports
 import matplotlib.pyplot as plt
 import numpy as np
+import uncertainties
 
 # B-Feld Auswertung
 x, B = np.genfromtxt('data/bfeld.txt', unpack=True)
