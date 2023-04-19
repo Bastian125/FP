@@ -1,7 +1,6 @@
 # Imports
 import matplotlib.pyplot as plt
 import numpy as np
-import matplotlib.ticker as ticker
 
 # B-Feld Auswertung
 x, B = np.genfromtxt('data/bfeld.txt', unpack=True)
@@ -99,8 +98,40 @@ plt.close()
 
 # Differenz plotten
 
-plt.plot((l1*1e-6)**2, ld2_n - ld1_n, 'x')
-plt.plot((l1*1e-6)**2, ld3_n - ld1_n, 'x')
+# Lineare Regression 1
+params, covariance_matrix = np.polyfit(l1**2, ld2_n - ld1_n, deg=1, cov=True)
+
+errors = np.sqrt(np.diag(covariance_matrix))
+
+for name, value, error in zip('ab', params, errors):
+    print(f'{name} = {value:.3f} ± {error:.3f}')
+
+# Lineare Regression 2
+params1, covariance_matrix1 = np.polyfit(l1**2, ld3_n - ld1_n, deg=1, cov=True)
+
+errors1 = np.sqrt(np.diag(covariance_matrix1))
+
+for name, value, error in zip('ab', params1, errors1):
+    print(f'{name} = {value:.3f} ± {error:.3f}')
+
+# Plot
+
+plt.plot(l1**2, ld2_n - ld1_n, 'x', label=r'GaAs n-dotiert, $N=1,2\cdot 10^{18}\,cm^{-3}$')
+plt.plot(l1**2, ld3_n - ld1_n, 'x', label=r'GaAs n-dotiert, $N=2,8\cdot 10^{18}\,cm^{-3}$')
+plt.plot(
+    l1**2,
+    params[0] * l1**2 + params[1],
+    label=r'Lineare Regression, $N=2,8\cdot 10^{18}\,cm^{-3}$',
+    linewidth=2,
+)
+plt.plot(
+    l1**2,
+    params1[0] * l1**2 + params1[1],
+    label=r'GaAs n-dotiert, $N=2,8\cdot 10^{18}\,cm^{-3}$',
+    linewidth=2,
+)
+plt.xlabel(r'$\lambda^2 \:/\:\mathrm{µm}^2$')
+plt.ylabel(r'$\frac{\Theta}{d} \:/\:$rad$\mathrm{m}^{-1}}$')
 
 plt.grid()
 plt.legend()
