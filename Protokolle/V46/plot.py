@@ -1,7 +1,8 @@
 # Imports
 import matplotlib.pyplot as plt
 import numpy as np
-import uncertainties
+from uncertainties import ufloat
+import scipy.constants as const
 
 # B-Feld Auswertung
 x, B = np.genfromtxt('data/bfeld.txt', unpack=True)
@@ -26,7 +27,7 @@ d1 = (a11 + g11/60)*(np.pi)/180
 d2 = (a12 + g12/60)*(np.pi)/180
 
 # Differenz berechnen
-ld1 = np.abs(d1-d2)
+ld1 = 0.5*np.abs(d1-d2)
 # Normieren
 dp1 = 5.1*10**(-3)
 ld1_n = ld1/dp1
@@ -42,7 +43,7 @@ d3 = (a21 + g21/60)*(np.pi)/180
 d4 = (a22 + g22/60)*(np.pi)/180
 
 # Differenz berechnen
-ld2 = np.abs(d3-d4)
+ld2 = 0.5*np.abs(d3-d4)
 
 # Normieren
 dp2 = 5.1*10**(-3)
@@ -58,7 +59,7 @@ d5 = (a31 + g31/60)*(np.pi)/180
 d6 = (a32 + g32/60)*(np.pi)/180
 
 # Differenz berechnen
-ld3 = np.abs(d5-d6)
+ld3 = 0.5*np.abs(d5-d6)
 # Normieren
 dp3 = 5.1*10**(-3)
 ld3_n = ld3/dp3
@@ -138,3 +139,17 @@ plt.grid()
 plt.legend()
 plt.savefig('build/plot2.pdf')
 plt.close()
+
+#freie Massen bestimmen
+a1 = ufloat(5264638028593.00, 906926335419.09)
+a2 = ufloat(2480202027226.74, 711670873463.99)
+B = 422e-3
+N1 = 1.2e12
+N2 = 2.8e12
+n = 3.3543
+
+def get_m(a, N):
+    return ((const.e**(3)*N*B)/(8*const.pi**(2)*const.c**(3)*const.epsilon_0*n*a))**(0.5)
+
+print('m_1 = ', get_m(a1, N1))
+print('m_2 = ', get_m(a2, N2))
