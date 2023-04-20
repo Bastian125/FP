@@ -151,11 +151,18 @@ n = 3.3543
 def get_m(a, N):
     return ((const.e**(3)*N*B)/(8*const.pi**(2)*const.c**(3)*const.epsilon_0*n*a))**(0.5)
 
+m_t = 0.063
 m1 = get_m(a1, N1)
 m2 = get_m(a2, N2)
+m_1 = m1/const.electron_mass
+m_2 = m2/const.electron_mass
 m = 0.5*(m1+m2)
+
 print('m_1 = ', m1)
 print('m_2 = ', m2)
-print('m_1/m_e = ', m1/const.electron_mass)
-print('m_2/m_e = ', m2/const.electron_mass)
+print('m_1/m_e = ', m_1)
+print('m_2/m_e = ', m_2)
 print('m/m_e = ', m/const.electron_mass)
+print('Abweichung m_1', 100*(m_1 - m_t)/m_t, '%')
+print('Abweichung m_2', 100*(m_2 - m_t)/m_t, '%')
+print('Abweichung m', 100*(m/const.electron_mass - m_t)/m_t, '%')
