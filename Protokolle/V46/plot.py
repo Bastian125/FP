@@ -144,12 +144,18 @@ plt.close()
 a1 = ufloat(5264638028593.00, 906926335419.09)
 a2 = ufloat(2480202027226.74, 711670873463.99)
 B = 422e-3
-N1 = 1.2e12
-N2 = 2.8e12
+N1 = (1.2*10**(12))/(10**(-2))**3
+N2 = (2.8*10**(12))/(10**(-2))**3
 n = 3.3543
 
 def get_m(a, N):
     return ((const.e**(3)*N*B)/(8*const.pi**(2)*const.c**(3)*const.epsilon_0*n*a))**(0.5)
 
-print('m_1 = ', get_m(a1, N1))
-print('m_2 = ', get_m(a2, N2))
+m1 = get_m(a1, N1)
+m2 = get_m(a2, N2)
+m = 0.5*(m1+m2)
+print('m_1 = ', m1)
+print('m_2 = ', m2)
+print('m_1/m_e = ', m1/const.electron_mass)
+print('m_2/m_e = ', m2/const.electron_mass)
+print('m/m_e = ', m/const.electron_mass)
