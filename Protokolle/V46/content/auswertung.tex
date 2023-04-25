@@ -4,8 +4,7 @@
 \subsection{Bestimmung der maximalen magnetischen Kraftflussdichte}
 Die mit Hilfe einer Hallsonde bestimmten Messwerte sind in \autoref{tab:bfeld} eingetragen und wurden in
 \autoref{fig:plot} graphisch dargestellt. Die maximale Feldstärke lässt sich zu $\SI{422}{\milli\tesla}$
-bei $x=\SI{89}{\milli\meter}$ oder $x=\SI{90}{\milli\meter}$ ablesen. Um das Maximum verlässlich ablesen
-zu können, wurden um das Maximum mehr Messwerte aufgenommen.
+ablesen. Um das Maximum verlässlich ablesen zu können, wurden um das Maximum mehr Messwerte aufgenommen.
 
 \begin{table}[hbt!]
   \centering
@@ -39,7 +38,8 @@ zu können, wurden um das Maximum mehr Messwerte aufgenommen.
 \begin{figure}[hbt!]
   \centering
   \includegraphics{plot.pdf}
-  \caption{Die magnetische Feldstärke $B$ in $mT$ gegen die Koordinate $x$ in $mm$ aufgetragen.}
+  \caption{Die magnetische Feldstärke $B$ in $\si{\milli\tesla}$ gegen die Koordinate $x$ in $\si{\milli\meter}$
+  aufgetragen.}
   \label{fig:plot}
 \end{figure}
 \newpage
@@ -55,7 +55,7 @@ die Parameter
 \end{align*}
 Dabei ist die erste Probe undotiert und anderen beiden sind mit einer Dotierkonzentration $N$ n-dotiert.
 Die am Goniometer abgelesenen Winkel wurden zur besseren Lesbarkeit in Grad umgerechnet. Weiterhin wurde die
-Winkeldifferenzen $\theta = \frac{1}{2}|\theta_{1} - \theta_{2}|$ in Radianten umgerechnet und mit Hilfe
+Winkeldifferenzen $\theta = \frac{1}{2}|\theta_{1} - \theta_{2}|$ in Radiant umgerechnet und mit Hilfe
 der oben angegebenen Parameter zu $\frac{\theta}{d}$ normiert.
 Die entsprechenden Messwerte und bestimmten Größen sind in \autoref{tab:m1}, 3 und 4 zu finden.
 \begin{table}[hbt!]
@@ -123,15 +123,15 @@ Die entsprechenden Messwerte und bestimmten Größen sind in \autoref{tab:m1}, 3
   \end{tabular}
 \end{table}
 Außerdem wird in \autoref{fig:norm} die normierte Faraday-Rotation $\theta/d$ gegen $\lambda^2$ aufgetragen.
-In wird die Differenz der normierten Faraday-Rotation der hochreinen GaAs-Probe und den n-dotierten GaAs-Proben
+In wird \autoref{fig:diff} die Differenz der normierten Faraday-Rotation der hochreinen GaAs-Probe und den n-dotierten GaAs-Proben
 gegen das Quadrat der Wellenlänge aufgetragen. Um die effektive Masse zu bestimmen, werden zwei Ausgleichsgeraden
 für die die Differenzen der normierten Faraday-Rotationen der n-dotierten GaAs-Proben mit der hocheinen bestimmt.
 Die Ausgleichsrechnung wird durch
 \begin{align*}
-  \theta_{frei} = a\cdot \lambda^2 + b
+  \theta_{\symup{frei}} = a\cdot \lambda^2 + b
 \end{align*}
 beschrieben.
-Der entsprechende Plot ist in \autoref{fig:diff} finden.
+Der entsprechende Plot ist in \autoref{fig:diff} zu finden.
 \begin{figure}[hbt!]
   \includegraphics{plot1.pdf}
   \caption{Die normierte Faraday-Rotation $\theta/d$ gegen die quadrierte Wellenlänge $\lambda^2$ für die
@@ -149,14 +149,14 @@ Der entsprechende Plot ist in \autoref{fig:diff} finden.
  \begin{align*}
   m^{*} = \sqrt{\frac{e_0^3}{8\pi^2 \varepsilon_0 c^3} \frac{N B_\text{max}}{n} \frac{1}{a}}
   \end{align*}
-Die Parameter der linearen Regression bestimmen sich für die $N=1,2\cdot 10^{18}\,cm^{-3}$ zu
+Die Parameter der linearen Regression bestimmen sich für die $N=1,2\cdot 10^{18}\,\si{\centi\meter}^{-3}$ zu
 \begin{align*}
-  a &= (5264638028593,00 \pm 906926335419,09) \si{\meter}^{-3} \\
+  a &= (5,26463802859300 \pm 9,0692633541909) \cdot 10^{12} \si{\meter}^{-3} \\
   b &= (-25,61 \pm 3,97) \si{\meter}^{-1}
 \end{align*}
 und für die $N=2,8\cdot 10^{18}\,cm^{-3}$ zu
 \begin{align*}
-  a &= (2480202027226,74 \pm 711670873463,99) \si{\meter}^{-3} \\
+  a &= (2,48020202722674 \pm 0,71167087346399)\cdot 10^{12} \si{\meter}^{-3} \\
   b &= (-13,12 \pm 3,12) \si{\meter}^{-1}
 \end{align*}
 Die effektiven Massen bestimmen sich zu

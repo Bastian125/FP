@@ -87,8 +87,8 @@ np.savetxt('data/thetad3.txt', ld3_n)
 
 # Plotte theta/d gegen lambda^2
 plt.plot(l1**2, ld1_n, 'x', label=r'GaAs undotiert')
-plt.plot(l2**2, ld2_n, 'x', label=r'GaAs n-dotiert, $N=1,2\cdot 10^{18}\,cm^{-3}$')
-plt.plot(l3**2, ld3_n, 'x', label=r'GaAs n-dotiert, $N=2,8\cdot 10^{18}\,cm^{-3}$')
+plt.plot(l2**2, ld2_n, 'x', label=r'GaAs n-dotiert, $N=1,2\cdot 10^{18}\,$cm$^{-3}$')
+plt.plot(l3**2, ld3_n, 'x', label=r'GaAs n-dotiert, $N=2,8\cdot 10^{18}\,$cm$^{-3}$')
 
 plt.xlabel(r'$\lambda^2 \:/\:\mathrm{µm}^2$')
 plt.ylabel(r'$\frac{\Theta}{d} \:/\:$rad$\mathrm{m}^{-1}}$')
