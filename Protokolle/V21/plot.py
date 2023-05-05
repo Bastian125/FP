@@ -65,6 +65,8 @@ plt.savefig('build/plot.pdf')
 print(f"M1: {M1}, B1: {B1}")
 print(f"M1: {M2}, B1: {B2}")
 
+print(f"B-Feld Erde: {(10**6)*(B1+B2)/2}")
+
 # g-Faktor:
 
 mu_b = (const.e*const.hbar)/(2*const.m_e)

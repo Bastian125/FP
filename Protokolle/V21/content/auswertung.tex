@@ -33,8 +33,10 @@ $f_{\text{HF}}$ im Oszilloskop verfolgen zu können.
 Die Stromstärke der Sweepspule kann über die angelegte Spannung über einen Faktor von $0.1$ ermittelt werden, während die
 Stromstärke der horizontalen Spule direkt gemessen wird. Die Messwerte sind im Anhang in \autoref{fig:messdaten} zu sehen.
 
+\subsection{Bestimmung der g-Faktoren und der Kernspins}
+
 Die HF-Frequenz $f_{\text{HF}}$ wird ausgehend von $\qty{100}{\kilo\hertz}$ in $\qty{100}{\kilo\hertz}$ Schritten erhöht,
-bis eine Frequenz von $\qty{100}{\mega\hertz}$ erreicht ist.
+bis eine Frequenz von $\qty{1}{\mega\hertz}$ erreicht ist.
 Für jede Frequenz werden die Stromstärken der Spulen an den beiden Peaks am Oszilloskop abgelesen und anschließend wird
 dann mithilfe von \eqref{eq:Bfeld} die den Peaks zugehörige Magnetfeldstärke berechnet.
 Die Wertepaare für beide Isotope sind in \autoref{fig:plot} geplottet.
@@ -46,12 +48,46 @@ Die Wertepaare für beide Isotope sind in \autoref{fig:plot} geplottet.
   \label{fig:plot}
 \end{figure}
 
-Fitresultat:
+Gemäß \eqref{eq:Resonanz} lässt sich ein linearer Zusammenhang zwischen RF-Frequenz $f_{\text{HF}}$ und Magnetfeld $B$ herstellen:
+\begin{equation}
+  B = \frac{h}{g_F \mu_B}f
+  \notag
+\end{equation}
+Ein linearer Fit der Form $B(f)=a*f+b$ wird durchgeführt, er ist in \autoref{fig:plot} eingezeichnet und liefert die Parameter:
+\begin{align*}
+  a_1 = \qty{1.431(0.007)e-10}{\tesla\per\hertz}, &&b_1 =\qty{2.54(0.04)e-05}{\tesla} \\
+  a_2 = \qty{2.109(0.019)e-10}{\tesla\per\hertz}, &&b_2 =\qty{2.64(0.12)e-05}{\tesla}
+\end{align*}
+Die Parameter $b_1$ und $b_2$ beschreiben den horizontalen Versatz der Geraden, der durch die horizontale Komponente
+des Erdmagnetfeldes verursacht wird. Daher kann aus ihrem Mitttelwert die Stärke des Erdmagnetfeldes berechnet werden: 
+\begin{align*}
+  B_{\text{Erde}} = \qty{25.9(0.6)}{\micro\tesla}
+\end{align*}
+Mithilfe der Fitparameter $a_1$ und $a_2$ kann nun durch umstellen der jeweilige g-Faktor $g_{\text{F}}$ der Isotope bestimmt werden.
+\begin{align*}
+  g_{\text{F}_1\text{,exp}} = \qty{0.4991(0.0024)}{} \\
+  g_{\text{F}_2\text{,exp}} = \qty{0.3387(0.0031)}{}
+\end{align*}
+Die Ergebnisse liegen somit nah an den theoretischen Werten von $g_{\text{F}_1}=\frac{1}{2}$ und $g_{\text{F}_2}=\frac{1}{3}$.
+Aus den g-Faktoren kann mithilfe von \eqref{eq:gf} der jeweilige Kernspin berechnet werden. Für die Berechnung von $g_J$ 
+werden die Quantenzahlen $S=\frac{1}{2}$, $L=0$ und $J=L+S=\frac{1}{2}$ gemäß \cite{Optical_Pumping} verwendet.
+Umstellen der Gleichung und einsetzen der Werte liefert die Kernspins:
+\begin{align*}
+  I_{1\text{,exp}} = \qty{1.504(0.010)}{} \\
+  g_{2\text{,exp}} = \qty{2.452(0.027)}{}
+\end{align*}
+Die theoretischen Kernspins der beiden Isotope sind $I=2.5$ für $^{85}\symup{Rb}$ und $I=1.5$ für $^{87}\symup{Rb}$.
+Somit handelt es sich beim Isotop 1 (1.Peak) um $^{87}\symup{Rb}$ und beim Isotop 2 (2.Peak) um $^{85}\symup{Rb}$.
 
-M1: (1.431+-0.007)e-10, B1: (2.54+-0.04)e-05
-M1: (2.109+-0.019)e-10, B1: (2.64+-0.12)e-05
+\subsection{Isotopenverhältnis}
 
-Erster g Faktor:0.4991+/-0.0024
-Zweiter g Faktor:0.3387+/-0.0031
-Erster Kernspin: I1=1.504+/-0.010
-Zweiter Kernspin: I2=2.452+/-0.027
+Um das Verhältnis der beiden Isotope zu bestimmen, werden die Höhen der Absorptionspeaks miteinander verglichen.
+Dafür wird das Oszilloskopbild aus \autoref{fig:oszilloskop} verwendet, die RF-Frequenz $f_{\text{HF}}$ beträgt
+hier also $\qty{100}{\kilo\hertz}$.
+Die Höhen der Peaks in Pixeln Betragen $1780$ für den ersten Peak und $748$ für den zweiten.
+Somit berechnet sich das Verhältnis zu:
+\begin{align*}
+  \frac{^{85}\symup{Rb}}{^{87}\symup{Rb}} \approx \qty{0.42}{}
+\end{align*}
+Dies ist etwas höher als das natürliche Verhältnis von $0.38$. Der Grund dafür besteht darin, dass zugunsten einer
+besseren Messbarkeit das $^{85}\symup{Rb}$ angereichert wurde, um einen größeren Peak zu erhalten.
