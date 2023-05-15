@@ -15,6 +15,7 @@ Bevor der Aufbau eines Diodenlaser erläutert wird, folgen zuerst die physikalis
 sowie Halbleitern und Dioden, da diese essentiell für das Verständniss der Funktionsweise eines Diodenlasers sind.
 
 \subsection{Absorption und Emmission in Zustandssystemen}
+\label{sec:sub1}
 
 In quantenmechanischen Systemen liegen diskrete Energieniveaus vor, das einfachste Beispiel hierfür ist ein Zweizustandssystem
 mit einer Grundzustandsenergie $E_1$ und einem angeregten Zustand mit der Energie $E_2$. Um in einen
@@ -52,7 +53,39 @@ die zuvor beschriebene, langsamere stimulierte Emmission stattfinden. Alle Teilc
 werden durch die anderen Photonen direkt wieder in den höchsten Zustand versetzt. Somit verweilen die meisten
 Teilchen im mittleren Zustand $E_2$ und die zuvor beschriebene Besetzungsinversion wurde erreicht.
 
-\subsection{Halbleiter und Dioden}
+\subsection{Dioden}
+Die Diode ist das zentrale Element, dass die Umwandlung der elektrischen Energie, die dem Laser zugeführt wird, in
+kohärentes Licht ermöglicht.
+Dafür werden die Eigenschaften von p- und n-dotierten Halbleitern ausgenutzt, beziehungsweise die einer Kombination von beiden.
+Ein dotierter Halbleiter ist ein Kristall, in den Fremdatome eingebracht wurden. Bei der p-dotierung handelt es sich um
+Fremdatome mit einem Hüllenelektron weniger als die ursprünglichen Atome. Das fehlende Elektron wird als "Loch"\, betrachtet
+und verhält sich bereits mit geringer thermischer Anregung (Raumtemperatur) wie in positives Teilchen, dass sich frei bewegen kann.
+Ein n-dotierter Halbleiter verfügt über Fremdatome mit einem zusätzlichen Hüllenelektron, welches sich nach Anregung dann ebenfalls frei
+bewegen kann.
+Eine Diode konstruiert man nun, indem man einen p- und n-dotierten Halbleiter zusammenfügt, sodass ein Übergang zwischen den
+beiden Zonen entsteht. An dem Übergang können Elektronen und Löcher ausgetauscht werden, sodass eine Zone negativer Ladung
+im p-dotierten Teil und eine Zone positiver Ladung im n-dotierten Teil entsteht.
+In dieser Zone können sich keine freien Ladungsträger mehr aufhalten, daher wird sie auch als Sperrschicht bezeichnet.
+Die Situation ist in \autoref{fig:pn} skizziert.
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=4cm]{content/pics/pn_uebergang.png}
+    \caption{Schematische Darstellung eines pn-Übergangs. \cite{pn_uebergang}}
+    \label{fig:pn}
+\end{figure}
+Nun wird eine Spannung angelegt, dabei ist die Polung entscheidend, da der pn-Übergang nur in einer Richtung stromdurchlässig ist.
+Sobald ein Strom durch die Diode fließt, beginnen die Elektron-Loch Paare zu rekombinieren und senden dabei Photonen aus, der
+Vorgang ist in \autoref{fig:pn_strom} dargestellt.
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=3.5cm]{content/pics/pn_strom.png}
+    \caption{Schematische Darstellung eines pn-Übergangs bei angelegter Spannung. \cite{pn_uebergang}}
+    \label{fig:pn_strom}
+\end{figure}
+Energetisch liegt hier ein Vierniveausystem vor, also analog zu dem in \autoref{sec:sub1} beschriebenen System mit einem
+zusätzlichen Energieniveau knapp über der Grundzustandsenergie. Bei ausreichend großen Stromstärken werden genug Photonen emmitiert, um eine Besetzungsinversion
+zu erreichen. Dann findet in der Diode stimulierte Emmission statt und es entsteht kohärentes Licht mit hoher Intensität, da die
+emmitierten Photonen direkt weitere, identische Photonen erzeugen können.
 
 \subsection{Aufbau eines Diodenlasers und Justierung}
 
@@ -68,6 +101,13 @@ Teilchen im mittleren Zustand $E_2$ und die zuvor beschriebene Besetzungsinversi
     \includegraphics[height=5cm]{content/pics/graiting.png}
     \caption{graiting. \cite{V60}}
     \label{fig:graiting}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=5cm]{content/pics/gain.png}
+    \caption{gain. \cite{V60}}
+    \label{fig:grain}
 \end{figure}
 
 \subsection{Absorptionsspektrum von Rubidium}
