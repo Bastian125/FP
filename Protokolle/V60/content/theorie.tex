@@ -54,6 +54,7 @@ werden durch die anderen Photonen direkt wieder in den höchsten Zustand versetz
 Teilchen im mittleren Zustand $E_2$ und die zuvor beschriebene Besetzungsinversion wurde erreicht.
 
 \subsection{Dioden}
+\label{sec:sub2}
 Die Diode ist das zentrale Element, dass die Umwandlung der elektrischen Energie, die dem Laser zugeführt wird, in
 kohärentes Licht ermöglicht.
 Dafür werden die Eigenschaften von p- und n-dotierten Halbleitern ausgenutzt, beziehungsweise die einer Kombination von beiden.
@@ -82,30 +83,63 @@ Vorgang ist in \autoref{fig:pn_strom} dargestellt.
     \caption{Schematische Darstellung eines pn-Übergangs bei angelegter Spannung. \cite{pn_uebergang}}
     \label{fig:pn_strom}
 \end{figure}
-Energetisch liegt hier ein Vierniveausystem vor, also analog zu dem in \autoref{sec:sub1} beschriebenen System mit einem
+Energetisch betrachtet liegt hier ein Vierniveausystem vor, also analog zu dem in \autoref{sec:sub1} beschriebenen System mit einem
 zusätzlichen Energieniveau knapp über der Grundzustandsenergie. Bei ausreichend großen Stromstärken werden genug Photonen emmitiert, um eine Besetzungsinversion
 zu erreichen. Dann findet in der Diode stimulierte Emmission statt und es entsteht kohärentes Licht mit hoher Intensität, da die
 emmitierten Photonen direkt weitere, identische Photonen erzeugen können.
 
 \subsection{Aufbau eines Diodenlasers und Justierung}
 
+Der wesentliche Bestandteil eines Diodenlasers ist der Diodenchip, der in seinem Zentrum sitzt.
+In \autoref{fig:laser} ist der genaue Aufbau dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics[height=8cm]{content/pics/laser.png}
-    \caption{Laserskizze. \cite{V60}}
+    \caption{Skizze des Diodenchips, in der die einzelnen Schichten der Diode, die stehende Welle sowie
+    der den vom Laser emmitierte Lichtstrahl erkennbar sind. \cite{V60}}
     \label{fig:laser}
 \end{figure}
-
+Durch den Chip fließt ein Strom von oben nach unten. In der sogenannten aktiven Schicht entsteht durch die in\autoref{sec:sub2} beschriebenen
+Prozesse bei ausreichender Stromstärke kohärentes Licht.
+Ist die Stromstärke zu gering, so wird keine Besetzungsinversion erreicht und der Laser emmitiert ein breites Frequenzsprektrum, ähnlich
+einer normalen LED.
+In \autoref{fig:laser} ist eine stehende Welle zu sehen, die sich in einem extra konstruierten optischen Resonator innerhalb
+des Diodenchips ausbildet. Ein Ende des Resonators ist vollständig reflektierend, während das andere nur teilweise reflektierend ist,
+um ein Austritt des Laserlichtes zu ermöglichen. Durch die stehende Welle kann die stimulierte Emmission kontinuierlich stattfinden
+und der Laser emmitiert somit andauernd Licht mit der selben Wellenlänge.
+Der Lichtstrahl, der den Chip verlässt, ist elliptisch und stark divergent, daher wird er mithilfe einer Kollimationslinse gebündelt.
+Die typische Bandbreite eines reinen Diodenasers beträgt $\qty{50}{\mega\hertz}$ und ist somit zu groß, um Übergangsspektren
+von Atomen aufzulösen.
+Um die Bandbreite zu verkleinern und den Laser weniger unempfindlich für von außen eintreffendes Licht zu machen, wird ein
+Teil des auslaufenden Strahls mithilfe eines Beugungsgitters wieder zurück in den Laser geworfen (diffraction grating).
+Eine Skizze hiervon ist in \autoref{fig:graiting} zu sehen.
 \begin{figure}[H]
     \centering
     \includegraphics[height=5cm]{content/pics/graiting.png}
-    \caption{graiting. \cite{V60}}
+    \caption{Schematische Darstellung des Prinzips des diffraction grating mithilfe der Bragg-Reflektion. \cite{V60}}
     \label{fig:graiting}
 \end{figure}
+Die reflektierte Wellenlänge lässt sich über den Winkel $\theta$ des Gitters mithilfe der Braggbedingung berechnen über:
+\begin{equation}
+    \notag
+    \lambda = 2d \sin(\theta)
+\end{equation}
+Um den Laseroutput zu stabilisieren, sollte diese Wellenlänge derjenigen der stehenden Welle im Diodenchip entsprechen.
+Aufgrund des größeren Abstandes zwischen Diodenchip und Gitter verkleinert sich das Frequenzsprektrum, man nennt diesen Teil
+auch den äußeren Resonator (external cavity).
+Das in nullter Ordnung reflektierte Licht (ca. 85\%) verlässt den Laser und wird zum Experimentieren verwendet.
+Um nun eine bestimmte Wellenlänge zu erhalten, können verschiedene Bestandteile des Diodenasers justiert werden.
+\begin{itemize}
+    \item medium
+    \item internal cavity
+    \item grating angle
+    \item external cavity
+\end{itemize}
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[height=5cm]{content/pics/gain.png}
+    \includegraphics[height=6cm]{content/pics/gain.png}
     \caption{gain. \cite{V60}}
     \label{fig:grain}
 \end{figure}
