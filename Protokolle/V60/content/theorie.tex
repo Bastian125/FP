@@ -1,6 +1,6 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
-Diodenaser sind von zentraler Bedeutung in der Physik, da mit ihrem starken Output von kohärenten
+Diodenlaser sind von zentraler Bedeutung in der Physik, da mit ihrem starken Output von kohärenten
 Licht innerhalb eines schmalen Frequenzsprektrums sehr gut atomare Strukturen bzw. Quantensysteme
 untersucht werden können. Außerdem können die Laser auf eine bestimmte Wellenlänge eingestellt werden, 
 wodurch sie sich optimal auf das zu untersuchende System anpassen lassen.
@@ -130,21 +130,53 @@ auch den äußeren Resonator (external cavity).
 Das in nullter Ordnung reflektierte Licht (ca. 85\%) verlässt den Laser und wird zum Experimentieren verwendet.
 Um nun eine bestimmte Wellenlänge zu erhalten, können verschiedene Bestandteile des Diodenasers justiert werden.
 \begin{itemize}
-    \item medium
-    \item internal cavity
-    \item grating angle
-    \item external cavity
+    \item Das Medium
+    \item Der innere Resonator
+    \item Die Gitterstreuung
+    \item Der äußere Resonator
 \end{itemize}
-
+Die Einflüsse der Bestandteile sind in \autoref{fig:gain} dargestellt. Durch das aktive Medium findet eine
+breite Verstärkung um eine Wellenlänge $\lambda_0$ statt. Diese Wellenlänge ist temperaturabhängig, da sie
+der Bandlücke des Mediums entspricht und diese auch Temperatur abhhängig ist. Des Weiteren kann sie auch durch
+den Diodenstrom verändert werden und ist außerdem die gröbste Einstellmöglichkeit des Lasers.
+Weiterhin ändert eine Temperaturänderung auch den Brechungsindex des
+Diodenmaterials, so dass sich die Moden im inneren Resonator ändern. Dadurch kann es zu in \autoref{fig:modensprung}
+dargestetllen Modensprüngen kommen. Außerdem hat der Diodenstrom noch Einfluss auf die Ladungsdichte und die
+Temperatur des aktiven Mediums und damit auch auf die Länge, so dass Frequenzänderungen im inneren Resonator
+entstehen. Durch Einstellen des Gitterwinkels und -abstands lassen sich bei festem Diodenstrom und fester Temperatur
+die Modenspektra der Resonatoren abstimmen und eine maximale Verstärkung erzielen. Dies ist in \autoref{fig:mode}
+dargestellt.
 
 \begin{figure}[H]
     \centering
     \includegraphics[height=6cm]{content/pics/gain.png}
-    \caption{gain. \cite{V60}}
-    \label{fig:grain}
+    \caption{Einfluss der Laserbestandteile in Abhängigkeit der Wellenlänge. Aus Gründen der Lesbarkeit
+    wurden die Graphen versetzt aufgetragen. \cite{V60}}
+    \label{fig:gain}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=6cm]{content/pics/modensprung.png}
+    \caption{Temperaturabhängigkeit der Wellenlänge des Lasers. \cite{V60}}
+    \label{fig:modensprung}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=6cm]{content/pics/moden.png}
+    \caption{Gain gegen Frequenz der Moden aufgetragen beim Abstimmen des inneren und des äußeren Resonator. 
+    \cite{V60}}
 \end{figure}
 
 \subsection{Absorptionsspektrum von Rubidium}
+Trift Laserlicht auf eine mit Rubidium gefüllte Kammer so ist eine Intensitätsabnahme fest zu stellen. Diese lässt
+sich dadurch erklären, dass die Elektronen der Rubidiumatome sich auf Energieniveaus befinden und durch die
+einfallenden Photonen durch Absorption auf höhere Energieniveaus gehoben werden.
+Die Photonen müssen eine Energie haben, die genau der Differenz der Energieniveaus entspricht. Anschließend fallen
+sie wieder herunter und emittieren dabei ein Photon mit der gleichen Energie. Da diese nun in alle möglichen
+Richtungen emittiert werden und nicht in Richtung des Laserstrahls, kann eine Intensitätsabnahme festgestellt werden.
+Das Transmissionsspektrum von Rubidium ist in \autoref{fig:rubidium} dargestellt.
 
 \begin{figure}[H]
     \centering
