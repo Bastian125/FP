@@ -71,7 +71,7 @@ phi, I = np.genfromtxt('content/data/polarisation.txt', unpack=True)
 I = I - 0.02 #background
 
 def model3(x, I, phi0):
-    return I * (np.cos(np.radians(x)-phi0))**2
+    return I * (np.sin(np.radians(x)-phi0))**2
 
 parameters3, pcov3 = curve_fit(model3, phi , I, sigma=None)
 I_ =unp.uarray(parameters3[0],pcov3[0,0])
@@ -126,3 +126,8 @@ print(f" 1. Gitter: {lambda1} nm")
 print(f" 2. Gitter: {lambda2} nm")
 print(f" 3. Gitter: {lambda3} nm")
 print(f" 4. Gitter: {lambda4} nm")
+print("\n")
+
+lambda1234 = np.concatenate((lambda1, lambda2, lambda3, lambda4), axis=None)
+lambda_tot = unp.uarray(np.mean(lambda1234),np.std(lambda1234))
+print(f"Mittelwert Lambda: {lambda_tot} nm")

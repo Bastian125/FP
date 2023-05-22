@@ -1,54 +1,198 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Im folgenden werden die Messergebnisse ausgewertet, dabei werden die 2 Spiegelkonfigurationen zuerst getrennt
+voneinander betrachtet.
 
 \subsection{Stabilitätsbedingung}
+Zuerst wird die Stabilitätsbedingung überprüft.
+Aus \eqref{eq:stabil} lässt sich ableiten, dass die maximale Resonatorlänge $L$ für eine
+stabile Konfiguration gegeben ist durch
+\begin{equation}
+  \notag
+  L_\text{max} = r_1 + r_2
+\end{equation}
+wobei $r_1$ der Krümmungsradius des ersten Spiegels und $r_2$ der Radius vom zweiten Spiegel ist.
+Bei der ersten Spiegelkonfiguration ist $r_1=r_2=\qty{1400}{\milli\metre}$, die maximale Länge beträgt
+somit $L_\text{max} = \qty{280}{\centi\metre}$. 
+In \autoref{tab:L1} ist die Laserintensität bei verschiedenen Resonatorlängen aufgelistet.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c}
+    {L / $\unit{\centi\metre}$} & {I / $\unit{\milli\watt}$} \\
+    \hline
+    50  & 1,44  \\
+    75  & 1,7  \\
+    100  & 0,8  \\
+    125  & 1,5  \\
+    150  & 1,38  \\
+    175  & 0,81   \\
+    200  & 1,3 
+  \end{tabular}
+  \caption{Laserintensitäten in Abhängigkeit der Resonatorlänge für die erste Spiegelkonfiguration ($r_1=r_2=\qty{1400}{\milli\metre}$).}
+  \label{tab:L1}
+\end{table}
+Die maximale Länge konnte dabei nicht erreicht werden, da die optische Schiene des Versuchsaufbaus zu kurz ist.
+Innerhalb der theoretischen Grenze konnte allerdings ein stabiler Laserbetrieb nachgewiesen werden.
+In der zweiten Spiegelkonfiguration wurde der zweite konkave Spiegel durch einen planen Spiegel ersetzt.
+Die Formel für die maximale mögliche Resonatorlänge vereinfacht sich deshalb zu
+\begin{equation}
+  \notag
+  L_\text{max} = r_1
+\end{equation}
+und liefert in diesem Fall $L_\text{max} = \qty{140}{\centi\metre}$.
+Analog zur vorherigen Messung sind die Intensitäten in \autoref{tab:L2} festgehalten.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c}
+    {L / $\unit{\centi\metre}$} & {I / $\unit{\milli\watt}$} \\
+    \hline
+    50  & 1,4  \\
+    75  & 1,83  \\
+    100  & 1,87  \\
+    125  & 2,7  \\
+    135  & 2,6  \\
+    138  & 1,8  \\
+    140  & 2,09  \\
+  \end{tabular}
+  \caption{Laserintensitäten in Abhängigkeit der Resonatorlänge für die zweite Spiegelkonfiguration ($r_1=\qty{1400}{\milli\metre}$, $r_2 = \infty$).}
+  \label{tab:L2}
+\end{table}
+Hier konnte bishin zu maximal theoretischen Resonatorlänge $L_\text{max} = \qty{140}{\centi\metre}$ ein Laserbetrieb nachgewiesen werden und
+somit insgesamt auch die Gültigkeit der Stabilitätsbedingung aus \eqref{eq:stabil}.
 
 \subsection{TEM Moden}
-
+Um die transversalen TEM Moden zu verifizieren, werden die Messwerte der Intensität graphisch dargestellt und anschließend ein Fit an die theoretische
+Funktion durchgeführt.
+\subsubsection{$\text{TEM}_{00}$ Mode}
+Zuerst wird die $\text{TEM}_{00}$ Mode analysiert. Die Messwerte sind in \autoref{fig:TEM00} geplottet.
+Die theoretische Intensitätsverteilung in x-Richtung lautet
+\begin{equation}
+  \notag
+  I_{\text{TEM}_{00}} = I_0 \exp \left( \frac{-\left(x - x_0\right)^2}{2\omega^2} \right)
+\end{equation}
+und wird mithilde der Python Erweiterung \textit{Scipy} \cite{scipy} an die Messwerte gefittet.
+Die Fitparameter ergeben sich zu
+\begin{align*}
+  I_0 &=\qty{126+-5}{\micro\watt} \\
+  x_0 &=\qty{0.2336+-0.0023}{\milli\metre}   \\
+ \omega &=\qty{2.2373+-0.0023}{\milli\metre},
+\end{align*}
+der resultierende Fit ist ebenfalls in \autoref{fig:TEM00} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics{plot_TEM00.pdf}
-  \caption{TEM00.}
+  \caption{Messwerte sowie Fit der Intensitätsverteilung in x-Richtung für die $\text{TEM}_{00}$ Mode.}
   \label{fig:TEM00}
 \end{figure}
-
-Fit TEM00:
-I0=126+/-5
-x0=0.2336+/-0.0023
-w=-2.2373+/-0.0023
-
+\subsubsection{$\text{TEM}_{01}$ Mode}
+Für die $\text{TEM}_{01}$ Mode wird analog verfahren, jedoch lautet die theoretische Intensitätsverteilung hier
+\begin{equation}
+  \notag
+  I_{\text{TEM}_{01}} = I_1 \frac{8\left( x - x_0\right)^2}{\omega^2} \exp \left( \frac{-\left(x - x_0\right)^2}{2\omega^2} \right).
+\end{equation}
+Die Fitparameter lauten nun
+\begin{align*}
+  I_1 &=\qty{3.460+-0.016}{\micro\watt} \\
+  x_0 &=\qty{1.377+-0.006}{\milli\metre}   \\
+  x_1 &=\qty{-1.499+-0.006}{\milli\metre}   \\
+ \omega &=\qty{2.2820+-0.0026}{\milli\metre},
+\end{align*}
+Die Messwerte sowie der Fit sind in \autoref{fig:TEM01} graphisch festgehalten.
 \begin{figure}[H]
   \centering
   \includegraphics{plot_TEM01.pdf}
-  \caption{TEM01.}
+  \caption{Messwerte sowie Fit der Intensitätsverteilung in x-Richtung für die $\text{TEM}_{01}$ Mode.}
   \label{fig:TEM01}
 \end{figure}
 
-Fit TEM01:
-I1=3.460+/-0.016
-x0=-1.377+/-0.006
-x1=-1.499+/-0.006
-w=2.2820+/-0.0026
-
 \subsection{Polarisationsmessung}
-
+Auch für die Polarisation des Lasers soll mithilfe eines Fits die theoretische Erwartung geprüft werden.
+In \autoref{fig:polarisation} sind die Messwerte der Intensität in Abhängigkeit des Winkels des Polarisationsfilters $\varphi$
+geplottet.
+Da der Laser in der Theorie im Bezug auf die Brewsterfenster nur p-polarisiertes Licht erzeugt, sollte in diesem
+Versuchsaufbau vertikal polarisiertes Licht emittiert werden und somit ein Intensitätsmaximum bei $\varphi = \qty{0}{\degree}$ und
+$\varphi = \qty{180}{\degree}$ vorhanden sein.
+Es ist also ein Zusammenhang der Form
+\begin{equation}
+  \notag
+  I(\varphi) = I_0 \sin^2\!\left(\varphi-\varphi_0\right)
+\end{equation}
+anzunehmen. Die Ausgleichsrechnung liefert hier für die Fitparameter die Werte
+\begin{align*}
+  I_0 &=\qty{3.97643+-0.00020}{\milli\watt} \\
+ \varphi_0 &=\qty{-3.4549+-0.0006}{\degree}.
+\end{align*}
+In \autoref{fig:polarisation} ist dieser Fit ebenfalls eingezeichnet.
 \begin{figure}[H]
   \centering
   \includegraphics{plot_pol.pdf}
-  \caption{Polarisation.}
+  \caption{Intensität des Lasers in Abhängigkeit des Winkels des Polarisationsfilters.}
   \label{fig:polarisation}
 \end{figure}
 
-Fit Polarisation:
-I=3.97643+/-0.00020
-phi0=86.5451+/-0.0006
-
 \subsection{Frequenzbreite}
+Ergänzen: Frequenzbreite Neon und L aus f berechnen und vergleichen
 
-\subsection{Wellenlängenberechnung}
-
-Wellenlängen:
- 1. Gitter: [634.59728714 637.28600413 641.56242235 634.91305616] nm
- 2. Gitter: [648.63121083 644.57615127 640.60943784 634.74532103] nm
- 3. Gitter: [641.02564103 640.18439966] nm
- 4. Gitter: 632.713835304414 nm
+\subsection{Wellenlänge}
+Die Wellenlänge des Lasers lässt sich mit Kenntniss der Abstände der Intensitätsmaxima einfach durch
+Umstellen der Gleichung \eqref{eq:winkel} berechnen zu
+\begin{equation}
+  \label{eq:lambda}
+  \lambda = \frac{g^{-1}}{n} \sin\left(\tan^{-1}\left(\frac{s_n}{d}\right)\right).
+\end{equation}
+Die Wellenlängen werden für die vier verschiedenen Gitter zuerst einzeln berechnet.
+Im folgenden werden die Messwerte sowie daraus berechnete Wellenlängen in \autoref{tab:lambda1}, \autoref{tab:lambda2},
+\autoref{tab:lambda3} und \autoref{tab:lambda4} dargestellt.
+Dabei beschreibt $s_n$ den absolouten Abstand zwischen zwei Intensitätsmaxima und wird deshalb vor dem Einsetzen in
+\eqref{eq:lambda} halbiert.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+    $n$ & $s_n$ / $\unit{\centi\metre}$& $\lambda$ / $\unit{\nano\metre}$ \\
+    \hline
+    1 & 6,1 & 634.60 \\
+    2 & 12,3 & 637.29 \\
+    3 & 18,7 & 641.56 \\
+    4 & 24,9 & 634.91
+  \end{tabular}
+  \caption{Messwerte und berechnete Wellenlängen für das erste Gitter ($g=\qty{80}{\per\milli\metre}$, $d=\qty{60}{\centi\metre}$).}
+\label{tab:lambda1}
+\end{table}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+    $n$ & $s_n$ / $\unit{\centi\metre}$& $\lambda$ / $\unit{\nano\metre}$ \\
+    \hline
+    1 & 7,8 & 648.63 \\
+    2 & 15,6 & 644.58 \\
+    3 & 23,5 & 640.61 \\
+    4 & 31,5 & 634.75
+  \end{tabular}
+  \caption{Messwerte und berechnete Wellenlängen für das zweite Gitter ($g=\qty{100}{\per\milli\metre}$, $d=\qty{60}{\centi\metre}$).}
+\label{tab:lambda2}
+\end{table}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+    $n$ & $s_n$ / $\unit{\centi\metre}$& $\lambda$ / $\unit{\nano\metre}$ \\
+    \hline
+    1 & 25 & 641.03 \\
+    2 & 72 & 640.18
+  \end{tabular}
+  \caption{Messwerte und berechnete Wellenlängen für das dritte Gitter ($g=\qty{600}{\per\milli\metre}$, $d=\qty{30}{\centi\metre}$).}
+\label{tab:lambda3}
+\end{table}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+    $n$ & $s_n$ / $\unit{\centi\metre}$& $\lambda$ / $\unit{\nano\metre}$ \\
+    \hline
+    1 & 70 & 632.71 \\
+  \end{tabular}
+  \caption{Messwerte und berechnete Wellenlängen für das vierte Gitter ($g=\qty{1200}{\per\milli\metre}$, $d=\qty{30}{\centi\metre}$).}
+\label{tab:lambda4}
+\end{table}
+Abschließend wird aus allen Wellenlängen der Mittelwert berechnet, das Ergebnis lautet
+\begin{align*}
+  \lambda &=\qty{639+-5}{\nano\metre}.
+\end{align*}
