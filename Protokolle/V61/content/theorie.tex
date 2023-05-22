@@ -1,12 +1,46 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
-In diesem Versuch soll die Funktion des Helium-Neon Lasers erprobt werden. Dazu wird eine Stabilitätsmessung
-durchgeführt, zwei TEM-Moden und die Polarisation des Lasers gemessen. Außerdem wird noch die Wellenlänge des
-Lasers mit Hilfe eines optischen Gitters bestimmt.
+In diesem Versuch soll die Funktion des Helium-Neon Lasers (HeNe-Laser) erprobt werden. Dazu wird eine
+Stabilitätsmessung durchgeführt, zwei TEM-Moden und die Polarisation des Lasers gemessen. Außerdem wird noch die
+Wellenlänge des Lasers mit Hilfe eines optischen Gitters bestimmt.
 
 \section{Theorie}
 \label{sec:Theorie}
 \subsection{Grundaufbau eines Lasers}
 \label{sec:Laser}
+Ein Laser besteht im Allgemeinen aus einer Pumpquelle, einem aktiven Medium und einem optischen Resonator. Bei
+einem HeNe-Laser wird für die Pumpquelle eine Spannung angelegt, so dass Elektronen das aktive Medium
+anregen. Das aktive Medium ist eine Helium-Neon-Gemisch mit einem Verhältnis von 5:1. Die Elektronen regen
+nun das Helium an, dass wiederum durch Stöße das Neon anregt. Da der angeregte Zustand im Neon wesentlich
+langlebieger als im Helium ist, lässt sich dadurch die benötigte Besetzungsinversion herstellen. Bei
+Besetzungsinversion sind alle Elektronen im angeregten Zustand. Ohne Pumpquelle wäre die Erwartung, dass
+die Elektronen nach der Boltzmannstatistik verteilt wären und dadurch eher die energetisch niedrigeren
+Zustände besetzen würden. Allgemein haben Elektronen nun zwei Möglichkeiten den energetisch höheren
+Zustand wieder zu verlassen. Zum einem die spontane Emission wobei durch Quantenfluktuation das Elektron
+in einen niedrigeren Zustand herab fällt und dabei ein Photon mit der Energiedifferenz der Zustände emittiert.
+Zum anderen die stimulierte Emission, bei der ein Photon mit der Energie entsprechenden Energie einfällt und
+das Elektron aus dem Zustand heraus löst. Dabei wird ein weiteres identisches Photon erzeugt. Um die gewünschte
+Verstärkung des Lichts zu erhalten muss die induzierte gegenüber der sponaten Emission überwiegen. Dies ist
+durch die Besetzungsinversion gegeben. Als Resonator werden zwei Spiegel verwendet. Einer von beiden ist hierbei
+teildurchlässig um das Laserlicht als Strahl heraus zu lassen. Damit es zu Oszillatorverhalten kommt, müssen
+die Reflektionsverluste der Spiegel möglichst gering gehalten werden. Je nach verwendeten Spiegel wird unter
+planparallelen und sphärischen Resonatoren unterschieden. Wobei auch Kombinationen aus beiden möglich sind.
+Außerdem befinden sich vor den Spiegeln noch Brewsterfenster, die nur p-polarisiertes Licht hindurchlassen und
+das s-polarisierte Licht aus dem Strahl beugen. Diese werden verwendet um Reflektionsverluste zu vermeiden und
+um die Verstärkung des Lichts nur linear zu polarisieren.
 
-\cite{sample}
+\subsection{Stabilität des Lasers}
+\label{sec:Stabilitaet}
+Die Stabilitätsbedingung für einen Laser ist durch
+\begin{equation}
+    \label{eq:stabil}
+    0 \leq g_1 \cdot g_2 \leq 1
+\end{equation}
+gegeben. Dabei sind $g_1$ und $g_2$ die Resonatorparameter, die sich durch
+\begin{equation}
+    \label{eq:param}
+    g_i = 1 - \frac{L}{r_i}
+\end{equation}
+mit der Resonatorlänge $L$ und den Krümmungsradien $r_i$ der Spiegel ergeben. Da die Wellenlänge des Lasers
+bei $\lambda = \SI{632,8}{\nano\meter}$ liegt und dadurch wesentlich kleiner als die Resonatorlänge $L$ ist,
+erfüllen viele Frequenzen die Resonatorbedingung.
