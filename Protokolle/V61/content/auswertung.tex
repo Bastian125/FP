@@ -18,7 +18,7 @@ In \autoref{tab:L1} ist die Laserintensität bei verschiedenen Resonatorlängen 
 \begin{table}[H]
   \centering
   \begin{tabular}{c|c}
-    {L / $\unit{\centi\metre}$} & {I / $\unit{\milli\watt}$} \\
+    {$L$ / $\unit{\centi\metre}$} & {$I$ / $\unit{\milli\watt}$} \\
     \hline
     50  & 1,44  \\
     75  & 1,7  \\
@@ -65,7 +65,7 @@ Um die transversalen TEM Moden zu verifizieren, werden die Messwerte der Intensi
 Funktion durchgeführt.
 \subsubsection{$\text{TEM}_{00}$ Mode}
 Zuerst wird die $\text{TEM}_{00}$ Mode analysiert. Die Messwerte sind in \autoref{fig:TEM00} geplottet.
-Die theoretische Intensitätsverteilung in x-Richtung lautet
+Die theoretische Intensitätsverteilung in x-Richtung lautet gemäß \eqref{eq:I}
 \begin{equation}
   \notag
   I_{\text{TEM}_{00}} = I_0 \exp \left( \frac{-\left(x - x_0\right)^2}{2\omega^2} \right)
@@ -85,7 +85,7 @@ der resultierende Fit ist ebenfalls in \autoref{fig:TEM00} dargestellt.
   \label{fig:TEM00}
 \end{figure}
 \subsubsection{$\text{TEM}_{01}$ Mode}
-Für die $\text{TEM}_{01}$ Mode wird analog verfahren, jedoch lautet die theoretische Intensitätsverteilung hier
+Für die $\text{TEM}_{01}$ Mode wird analog verfahren, jedoch lautet die theoretische Intensitätsverteilung laut \eqref{eq:I} hier
 \begin{equation}
   \notag
   I_{\text{TEM}_{01}} = I_1 \frac{8\left( x - x_0\right)^2}{\omega^2} \exp \left( \frac{-\left(x - x_0\right)^2}{2\omega^2} \right).
@@ -131,7 +131,60 @@ In \autoref{fig:polarisation} ist dieser Fit ebenfalls eingezeichnet.
 \end{figure}
 
 \subsection{Frequenzbreite}
-Ergänzen: Frequenzbreite Neon und L aus f berechnen und vergleichen
+Die Vermessung der Schwebungsfrequenz liefert für unterschiedliche Resonaterlängen mehrere PFrequenzpeaks im Oszilloskop, diese
+sind in \autoref{tab:frequenz} festgehalten. Die Schwebungsfrequenz ist der mittlere Abstand zwischen den
+Peaks und ist ebenfalls in \autoref{tab:frequenz} eingetragen.
+Die Lichtverstärkung des He-Ne Lasers kann innerhalb eines Bereichs von $f'=\qty{1500}{\mega\hertz}$ (Doppler-Breite) stattfinden.
+Die Anzahl der Möglichen Moden im Laser ergibt sich also daraus, wie oft die Schwebungsfrequenz in die Doppler-Breite passt.
+Diese Überlegung ist in der letzten Spalte von \autoref{tab:frequenz} für alle Resonaterlängen zu finden.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c|c}
+    {$L$ / $\unit{\centi\metre}$} & {$f$ / $\unit{\mega\hertz}$} & {$\Delta f$ / $\unit{\mega\hertz}$} & {mod $\frac{f'}{\Delta f}$} \\
+    \hline
+    50  &  300, 600, 900 & 300 & 5\\
+    75  &  203, 405, 604, 806 & $\approx$200 & 7 \\
+    100  & 154, 304, 454, 608, 758 & $\approx$150 & 10 \\
+    125  & 120, 240, 360, 480, 600, 720 & 120 & 12,5 \\
+    150  & 101, 199, 300, 401, 500, 600 & $\approx$100 & 15 \\
+    175  & 86, 173, 260, 345, 435, 518 & $\approx$85 & 17\\
+    200  & 75, 154, 325, 375, 450 & 75 & 20
+  \end{tabular}
+  \caption{Frequenzpeaks in Abhängigkeit der Resonatorlänge für die erste Spiegelkonfiguration ($r_1=r_2=\qty{1400}{\milli\metre}$).}
+  \label{tab:frequenz}
+\end{table}
+Es ist zu beobachten, dass die Schwebungsfrequenz $\Delta f$ mit zunehmender Resonaterlänge abnimmt. Dies ist damit zu begründen,
+dass die benötigte Zeit der Photonenbunches zwischen den Spiegeln hin und her zu laufen proportional zum Spiegelabstand zunimmt.
+Da die Frequenz antiproportional zur Zeit ist, nimmt diese somit ab.
+Da alle gemessen Frequenzen wesentlich kleiner als die Doppler-Breite sind, läuft der Laser im Multimodenbetrieb. Erst durch hinreichend
+kleine Resonaterlängen ließe sich ein Singlemode Betrieb einstellen.
+Über den Zusammenhang
+\begin{equation}
+  \notag
+  \Delta f = \frac{1}{T} = \frac{c}{2L}
+\end{equation}
+kann durch Umstellen die Resonatorlänge berechnet werden. Ein Vergleich mit der tatsächlich eingestellten Länge
+ermöglicht dann eine Verifizierung des Messverfahrens.
+Die berechneten Resonatorlängen sowie ihre Abweichung zu den tatsächlichen Längen sind in \autoref{tab:l_freq}
+notiert.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c}
+    {$L$ / $\unit{\centi\metre}$} & {$L_{\text{exp}}$ / $\unit{\centi\metre}$} & {$\Delta L$ / $\unit{\percent}$} \\
+    \hline
+    50  &  49,97 & 0,06\\
+    75  &  74,95 & 0,07 \\
+    100  & 99,93 & 0,07  \\
+    125  & 124,91 & 0,07  \\
+    150  & 150,90 & 0,06 \\
+    175  & 176,39 & 0,79 \\
+    200  & 199,86 & 0,07
+  \end{tabular}
+  \caption{Frequenzpeaks in Abhängigkeit der Resonatorlänge für die erste Spiegelkonfiguration ($r_1=r_2=\qty{1400}{\milli\metre}$).}
+  \label{tab:l_freq}
+\end{table}
+Allgemein lässt sich hier eine gute Übereinstimmung der Längen beobachten.
 
 \subsection{Wellenlänge}
 Die Wellenlänge des Lasers lässt sich mit Kenntniss der Abstände der Intensitätsmaxima einfach durch
