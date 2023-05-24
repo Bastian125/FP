@@ -44,3 +44,30 @@ gegeben. Dabei sind $g_1$ und $g_2$ die Resonatorparameter, die sich durch
 mit der Resonatorlänge $L$ und den Krümmungsradien $r_i$ der Spiegel ergeben. Da die Wellenlänge des Lasers
 bei $\lambda = \SI{632,8}{\nano\meter}$ liegt und dadurch wesentlich kleiner als die Resonatorlänge $L$ ist,
 erfüllen viele Frequenzen die Resonatorbedingung.
+
+\subsection{TEM-Modem}
+\label{sec:Moden}
+Die Anzahl der möglichen Wellenlängen werden als longitudinale Moden beschrieben. Da der Spiegel des Resonators
+Unebenheiten aufweisen oder verkippt sein kann, kann es auch zu transversalen Moden kommen. Die Moden lassen sich
+durch die Schreibweise $TEM_{lqp}$ beschreiben. Dabei gibt $q$ die longitudinale Mode an, $l$ und $p$ die $x$-
+und $y$-Position der Knoten. Dabei ist die $TEM_{00}$-Mode die mit der höchsten Symmetrie und den geringsten
+Verlusten. Allgemein lässt sich die Intensitätsverteilung durch eine Gaußverteilung und für die Mode entsprechenden
+Hermite-Polynomen durch
+\begin{equation}
+    I_{lp}(x) \propto I_0 |H_{l}(x)H_{p}(x)e^{-\frac{x^2}{2}}|^2
+\end{equation}
+ausdrücken. Dies lässt sich wegen $I_{lp} \propto |E_{lp}|^2$ aus
+\begin{equation}
+    E_{lp}(x) \propto H_{l}(x)H_{p}(x)e^{-\frac{x^2}{2}}
+\end{equation}
+herleiten. Die Intensität der $TEM_{00}$-Mode ist dementsprechend nur eine Gaußgverteilung.
+
+\subsection{Wellenlänge}
+\label{sec:Wellenlaenge}
+Wird durch einen Draht ein Interferenzmuster auf einem Schirm geworfen, kann aus den Abständen der Maxima auf dem
+Schirm die Wellenlänge durch
+\begin{equation}
+    \label{eq:winkel}
+    \lambda = \frac{g^{-1}}{n} \sin\left(\tan^{-1}\left(\frac{s_n}{d}\right)\right)
+\end{equation}
+bestimmen.
