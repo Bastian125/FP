@@ -122,10 +122,39 @@ beschrieben, dabei steht $\symup{\Delta} p$ für den Druck, der in der Zeit $\sy
     S = \frac{Q}{p_{\text{G}}}.
 \end{equation}
 Dafür muss der Gleichgewichtsdruck $p_{\text{G}}$ bekannt sein. Bei diesem Druck gleicht sich die Saugleistung der Pumpe genau mit den
-Undichtigkeiten der Lecks aus, sodass ein Gleichgewicht entsteht. In diesem Versuch werden zwei Typen von Vakuumpumpen verwendet:
+Undichtigkeiten der Lecks aus, sodass ein Gleichgewicht entsteht. \\
+Für unterschiedliche Druckbereiche gibt es verschiedene Funktionsprinzipien von Pumpen, in diesem Versuch werden zwei Typen von Vakuumpumpen verwendet:
 \begin{enumerate}
-    \item Drehschieberpumpe:
-    \item Turbomolekularpumpe:
+    \item Die \textbf{Drehschieberpumpe} zählt zur Kategorie der Transport- bzw. Verdrängerpumpen, das Arbeitsprinzip ist also der Abtransport von Gas
+    durch Ansaugung und anschließende Verdrängung. Eine Skizze ihres Aufbaus ist in \autoref{fig:Drehschieberpumpe} zu sehen.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{content/pics/drehschieberpumpe.png}
+        \caption{Schematische Darstellung des Aufbaus einer Drehschieberpumpe \cite{Pfeiffer_Drehschieberpumpe}.}
+        \label{fig:Drehschieberpumpe}
+    \end{figure}
+    Im Gehäuse befindet ein sich drehender Rotor, der Schieber besitzt, um den Arbeitsraum zu teilen und abzudichten.
+    Zu Beginn eines Arbeitstaktes strömt Gas durch den Einlass in den Arbeitsraum, da dieser sich expandiert und somit ein Druckgefälle vorliegt.
+    Dannach wird der Raum durch den zweiten Schieber verschlossen und das Gas komprimiert. Sobald der Druck den Atmosphärendruck übersteigt,
+    öffnet das Auslassventil und das Gas entweicht aus der Pumpe. In der Pumpe befindet sich zu jeder Zeit eine kleine Menge Öl, das
+    eine Schmierung der Lager sowie eine saubere Abdichtung der Schieber und Ventile gewährleistet. Aufgrund der limitierten Kompressionsfähigkeit
+    im Arbeitsraum durch konstruktionstechnisch bedingte Restvolumina ist der Druckbereich der Pumpe limitiert.
+    Einstufige Ausführungen erreichen typischerweise Enddrücke von $\qty{0.1}{\milli\bar}$, durch weitere Stufen kann dies weiter verringert werden.
+    Eine Drehschieberpumpe eignet sich somit zur Erzeugung eines Vorvakuus, das anschließend mit Pumpen anderer Bauart verfeinert werden kann.
+    \item Bei gegebenen Vorvakuum kann der Druck mithilfe einer \textbf{Turbomolekularpumpe} weiter verringert werden.
+    In \autoref{fig:Turbo} ist der grobe Aufbau dargestellt.
+    Die Turbomolekularpumpe zählt zu den kinetischen Pumpen. Ein Rotor mit Schaufeln führt den Gasteilchen kinetische Energie zu, sodass sie
+    sich zwischen Rotor und Stator entlang aus dem System heraus bewegen. Das Funktionsprinzip kann somit mit dem einer Turbine verglichen werden. Der
+    Stator muss mit hoher Drehzahl betrieben werden, damit der Energieübertrag relevant gegenüber der thermischen Energie der Teilchen ist.
+    Das Vorvakuum wird benötigt, um die zufälligen Kollisionen der Gasteilchen untereinander zu unterdrücken, da diese dem Pumpprozess entgegenwirken
+    würden. Im Gegenzug können Drücke im Bereich $\qty{1e-3}{\milli\bar}$ und $\qty{1e-10}{\milli\bar}$ erreicht werden \cite{Pfeiffer_Turbomolekularpumpen},
+    was bereits einem Hochvakuum entspricht.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{content/pics/turbo.png}
+        \caption{Schematische Darstellung des Aufbaus einer Drehschieberpumpe \cite{Turbopumpe}.}
+        \label{fig:Turbo}
+    \end{figure}
 \end{enumerate}
 
 \subsection{Vakuummessung}
