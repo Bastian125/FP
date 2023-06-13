@@ -158,3 +158,22 @@ Für unterschiedliche Druckbereiche gibt es verschiedene Funktionsprinzipien von
 \end{enumerate}
 
 \subsection{Vakuummessung}
+Um die Güte des erzeugten Vakuums zu messen, gibt es je nach Druckbereich verschiedene Messmethoden bzw. Messgeräte.
+\begin{itemize}
+    \item Eine \textbf{Pirani-Messröhre} nutzt die Druckabhängigkeit der Wärmeleitfähigkeit von Gasen aus. Durch einen Draht wird
+    soviel Strom geleitet, sodass dieser anfängt zu glühen. Je geringer der Druck, desto schlechter wird die Wärme abgeführt und der
+    Draht wird heißer. Dadurch erhöht sich der Widerstand, was mithilfe einer Messbrücke nachgewiesen werden kann. Der Widerstand ist somit
+    proportional zum Druck, solange dieser nicht kleiner als $\qty{1e-4}{\milli\bar}$ wird, dann überwiegt die Wärmestrahlung.
+    Auch bei Drücken größer $\qty{10}{\milli\bar}$ ist die Wärmeleitfähigkeit unabhängig vom Druck, dies begrenzt das Messfenster nach oben. \cite{Druckmessung}
+    \item Das \textbf{Piezo-Membranvakuummeter} nutzt die den Druck ausgelöste Kraft auf eine Fäche. Auf einer Membran platzierte Piezo-Kristalle
+    verändern wegen deren Durchbiegung ihre Länge und somit den Widerstand, der dann gemessen werden kann. Diese Messmethode bietet eine hohe Präzision,
+    ab Drücken unter $\qty{1e-5}{\milli\bar}$ wird die Kraft und somit die Durchbiegung jedoch zu gering. \cite{Druckmessung}
+    \item Niedrigere Druckbereiche können mit \textbf{Ionisationsvakuumetern} gemessen werden, diese Beruhen auf der Ionisation der Gasatome mithilfe von
+    Elektronen. Zwischen einer Anode und Kathode werden Elektronen beschleunigt, die Hüllenelektronen der Gasatome aus der äußeren Schale stoßen.
+    Die Gasatome sind anschließend Ionisiert und verursachen einen messbaren Ionisationsstrom. Da mit sinkendem Druck die Anzahl an Gasatomen abnimmt,
+    ist dieser Strom proportional zum Druck. Es wird zwischen \textit{Kaltkathoden-} und \textit{Heißkathodenvakuumetern} unterschieden.
+    Beim \textit{Kaltkathodenvakuumeter} werden die Elektronen durch Feldemmision erzeugt, während das \textit{Heißkathodenvakuumeter} den
+    glühelektrischen Effekt verwendet. Um den Messbereich zu erweitern werden die Elektronen durch ein Magnetfeld geschickt, die resultierenden
+    Kreisbahnen erhöhen die Stoßwahrscheinlichkeit mit den Atomen signifikant. Somit lassen sich auf diese Art Drücke von bis zu $\qty{1e-10}{\milli\bar}$
+    nachweisen. \cite{Druckmessung}
+\end{itemize}
