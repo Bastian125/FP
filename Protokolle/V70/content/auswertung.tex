@@ -4,22 +4,255 @@
 \subsection{Turbomolekularpumpe}
 \subsubsection{Leckratenmessung}
 Es wird für die Leckratenmessung der Turbomolekularpumpe eine Messreihe aufgenommen. Die Messwerte sind in
-\autoref{tab:turboleck} zu finden. In \autoref{fig:turboleck} ist der Druck $p$ in $mbar$ gegen die
-Zeit $t$ in $s$ aufgetragen.
-\begin{table}
+\autoref{tab:turboleck} zu finden. In \autoref{fig:turboleck} ist der Druck $p$ in $\si{\milli\bar}$ gegen die
+Zeit $t$ in $\si{\second}$ aufgetragen.
+\begin{table}[H]
   \centering
-  \caption{Der gemessene Druck $p$ in $mbar$ gegen die Zeit $t$ in $s$ aufgetragen
+  \caption{Leckratenmessung der Turbomolekularpumpe}
   \label{tab:turboleck}
   \begin{tabular}{c c}
     \toprule
-    $t/s$ & $p/mbar\cdot 10^{-3}$
+    $t/\si{\second}$ & $p/\si{\milli\bar}$ \\
     \midrule
+    $  0$ & $(6,00 \pm 1,80) \cdot 10^{-5}$ \\
+    $  5$ & $(9,93 \pm 2,98) \cdot 10^{-5}$ \\
+    $ 10$ & $(1,22 \pm 0,37) \cdot 10^{-4}$ \\
+    $ 15$ & $(1,50 \pm 0,45) \cdot 10^{-4}$ \\
+    $ 20$ & $(1,79 \pm 0,54) \cdot 10^{-4}$ \\
+    $ 25$ & $(2,06 \pm 0,62) \cdot 10^{-4}$ \\
+    $ 30$ & $(2,33 \pm 0,70) \cdot 10^{-4}$ \\
+    $ 35$ & $(2,59 \pm 0,78) \cdot 10^{-4}$ \\
+    $ 40$ & $(2,84 \pm 0,85) \cdot 10^{-4}$ \\
+    $ 45$ & $(3,11 \pm 0,93) \cdot 10^{-4}$ \\
+    $ 50$ & $(3,36 \pm 1,01) \cdot 10^{-4}$ \\
+    $ 55$ & $(3,64 \pm 1,09) \cdot 10^{-4}$ \\
+    $ 60$ & $(3,92 \pm 1,18) \cdot 10^{-4}$ \\
+    $ 65$ & $(4,15 \pm 1,24) \cdot 10^{-4}$ \\
+    $ 70$ & $(4,42 \pm 1,33) \cdot 10^{-4}$ \\
+    $ 75$ & $(4,69 \pm 1,41) \cdot 10^{-4}$ \\
+    $ 80$ & $(4,95 \pm 1,49) \cdot 10^{-4}$ \\
+    $ 85$ & $(5,20 \pm 1,56) \cdot 10^{-4}$ \\
+    $ 90$ & $(5,47 \pm 1,64) \cdot 10^{-4}$ \\
+    $ 95$ & $(5,73 \pm 1,72) \cdot 10^{-4}$ \\
+    $100$ & $(5,99 \pm 1,80) \cdot 10^{-4}$ \\
+    $105$ & $(6,23 \pm 1,87) \cdot 10^{-4}$ \\
+    $110$ & $(6,50 \pm 1,95) \cdot 10^{-4}$ \\
+    $115$ & $(6,76 \pm 2,03) \cdot 10^{-4}$ \\
+    $120$ & $(7,17 \pm 2,15) \cdot 10^{-4}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
-\subsubsection{Evakuierungsmessung}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/turboleck.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Tubromolekularpumpe.}
+  \label{fig:turboleck}
+\end{figure}
+
+\subsubsection{Evakuierungsmessung}
+Es wurden für den Startdruck $p_{0} \approx 5\cdot 10^{-3}\,\si{\milli\bar}$ drei Messreihen aufgenommen und
+gemittelt. Für die weitere Auswertung wurde noch $ln(\frac{p(t)-p_0}{p_0 - p_E})$ bestimmt und gegen die Zeit
+$t$ in $\si{\second}$ aufgetragen. Die entsprechenden Werte und die dazu passende grafische Abbildung sind in
+\autoref{tab:turboevak} und \autoref{fig:turboevak} zu finden.
+
+\begin{table}[H]
+  \centering
+  \caption{Messdaten und daraus berechnete Größen der Evakuierungsmessung.}
+  \label{tab:turboevak}
+  \begin{tabular}{c c c c c }
+    \toprule
+    $t/s$ & $p_1 /\si{\milli\bar}$ & $p_2 /\si{\milli\bar}$ & $p_3 /\si{\milli\bar}$ & $p_m /\si{\milli\bar}$ \\
+    \midrule
+    $  0$ & $ (5,02 \pm 1,51)\cdot 10^{-3}$ & $ (5,17 \pm 1,55)\cdot 10^{-3}$ & $ (5,12 \pm 1,54)\cdot 10^{-3}$ & $(5,10 \pm 0,89)\cdot 10^{-3} $ \\
+    $  5$ & $ (4,93 \pm 1,48)\cdot 10^{-4}$ & $ (4,78 \pm 1,43)\cdot 10^{-4}$ & $ (5,15 \pm 1,55)\cdot 10^{-4}$ & $(4,95 \pm 0,86)\cdot 10^{-4} $ \\
+    $ 10$ & $ (1,39 \pm 0,42)\cdot 10^{-4}$ & $ (1,32 \pm 0,40)\cdot 10^{-4}$ & $ (1,49 \pm 0,45)\cdot 10^{-4}$ & $(1,40 \pm 0,24)\cdot 10^{-4} $ \\
+    $ 15$ & $ (6,01 \pm 1,80)\cdot 10^{-5}$ & $ (6,05 \pm 1,82)\cdot 10^{-5}$ & $ (6,52 \pm 1,96)\cdot 10^{-5}$ & $(6,19 \pm 1,07)\cdot 10^{-5} $ \\
+    $ 20$ & $ (3,65 \pm 1,10)\cdot 10^{-5}$ & $ (3,78 \pm 1,13)\cdot 10^{-5}$ & $ (4,16 \pm 1,25)\cdot 10^{-5}$ & $(3,86 \pm 0,67)\cdot 10^{-5} $ \\
+    $ 25$ & $ (3,04 \pm 0,91)\cdot 10^{-5}$ & $ (3,04 \pm 0,91)\cdot 10^{-5}$ & $ (3,34 \pm 1,00)\cdot 10^{-5}$ & $(3,14 \pm 0,54)\cdot 10^{-5} $ \\
+    $ 30$ & $ (2,75 \pm 0,83)\cdot 10^{-5}$ & $ (3,17 \pm 0,95)\cdot 10^{-5}$ & $ (3,02 \pm 0,91)\cdot 10^{-5}$ & $(2,98 \pm 0,52)\cdot 10^{-5} $ \\
+    $ 35$ & $ (2,56 \pm 0,77)\cdot 10^{-5}$ & $ (2,86 \pm 0,86)\cdot 10^{-5}$ & $ (2,80 \pm 0,84)\cdot 10^{-5}$ & $(2,74 \pm 0,48)\cdot 10^{-5} $ \\
+    $ 40$ & $ (2,44 \pm 0,73)\cdot 10^{-5}$ & $ (2,67 \pm 0,80)\cdot 10^{-5}$ & $ (2,63 \pm 0,79)\cdot 10^{-5}$ & $(2,58 \pm 0,45)\cdot 10^{-5} $ \\
+    $ 45$ & $ (2,34 \pm 0,70)\cdot 10^{-5}$ & $ (2,52 \pm 0,76)\cdot 10^{-5}$ & $ (2,50 \pm 0,75)\cdot 10^{-5}$ & $(2,45 \pm 0,43)\cdot 10^{-5} $ \\
+    $ 50$ & $ (2,26 \pm 0,68)\cdot 10^{-5}$ & $ (2,32 \pm 0,70)\cdot 10^{-5}$ & $ (2,38 \pm 0,71)\cdot 10^{-5}$ & $(2,32 \pm 0,40)\cdot 10^{-5} $ \\
+    $ 55$ & $ (2,19 \pm 0,66)\cdot 10^{-5}$ & $ (2,24 \pm 0,67)\cdot 10^{-5}$ & $ (2,29 \pm 0,69)\cdot 10^{-5}$ & $(2,24 \pm 0,39)\cdot 10^{-5} $ \\
+    $ 60$ & $ (2,13 \pm 0,64)\cdot 10^{-5}$ & $ (2,18 \pm 0,65)\cdot 10^{-5}$ & $ (2,22 \pm 0,67)\cdot 10^{-5}$ & $(2,18 \pm 0,38)\cdot 10^{-5} $ \\
+    $ 65$ & $ (2,08 \pm 0,62)\cdot 10^{-5}$ & $ (2,12 \pm 0,64)\cdot 10^{-5}$ & $ (2,15 \pm 0,65)\cdot 10^{-5}$ & $(2,12 \pm 0,37)\cdot 10^{-5} $ \\
+    $ 70$ & $ (2,04 \pm 0,61)\cdot 10^{-5}$ & $ (2,07 \pm 0,62)\cdot 10^{-5}$ & $ (2,10 \pm 0,63)\cdot 10^{-5}$ & $(2,07 \pm 0,36)\cdot 10^{-5} $ \\
+    $ 75$ & $ (1,99 \pm 0,60)\cdot 10^{-5}$ & $ (2,02 \pm 0,61)\cdot 10^{-5}$ & $ (2,05 \pm 0,62)\cdot 10^{-5}$ & $(2,02 \pm 0,35)\cdot 10^{-5} $ \\
+    $ 80$ & $ (1,96 \pm 0,59)\cdot 10^{-5}$ & $ (1,98 \pm 0,59)\cdot 10^{-5}$ & $ (2,00 \pm 0,60)\cdot 10^{-5}$ & $(1,98 \pm 0,34)\cdot 10^{-5} $ \\
+    $ 85$ & $ (1,92 \pm 0,58)\cdot 10^{-5}$ & $ (1,95 \pm 0,59)\cdot 10^{-5}$ & $ (1,96 \pm 0,59)\cdot 10^{-5}$ & $(1,94 \pm 0,34)\cdot 10^{-5} $ \\
+    $ 90$ & $ (1,90 \pm 0,57)\cdot 10^{-5}$ & $ (1,91 \pm 0,57)\cdot 10^{-5}$ & $ (1,93 \pm 0,58)\cdot 10^{-5}$ & $(1,91 \pm 0,33)\cdot 10^{-5} $ \\
+    $ 95$ & $ (1,87 \pm 0,56)\cdot 10^{-5}$ & $ (1,89 \pm 0,57)\cdot 10^{-5}$ & $ (1,90 \pm 0,57)\cdot 10^{-5}$ & $(1,89 \pm 0,33)\cdot 10^{-5} $ \\
+    $100$ & $ (1,85 \pm 0,56)\cdot 10^{-5}$ & $ (1,86 \pm 0,56)\cdot 10^{-5}$ & $ (1,87 \pm 0,56)\cdot 10^{-5}$ & $(1,86 \pm 0,32)\cdot 10^{-5} $ \\
+    $105$ & $ (1,82 \pm 0,55)\cdot 10^{-5}$ & $ (1,83 \pm 0,55)\cdot 10^{-5}$ & $ (1,84 \pm 0,55)\cdot 10^{-5}$ & $(1,83 \pm 0,32)\cdot 10^{-5} $ \\
+    $110$ & $ (1,80 \pm 0,54)\cdot 10^{-5}$ & $ (1,81 \pm 0,54)\cdot 10^{-5}$ & $ (1,81 \pm 0,54)\cdot 10^{-5}$ & $(1,81 \pm 0,31)\cdot 10^{-5} $ \\
+    $115$ & $ (1,78 \pm 0,53)\cdot 10^{-5}$ & $ (1,79 \pm 0,54)\cdot 10^{-5}$ & $ (1,79 \pm 0,54)\cdot 10^{-5}$ & $(1,79 \pm 0,31)\cdot 10^{-5} $ \\
+    $120$ & $ (1,76 \pm 0,53)\cdot 10^{-5}$ & $ (1,77 \pm 0,53)\cdot 10^{-5}$ & $ (1,77 \pm 0,53)\cdot 10^{-5}$ & $(1,77 \pm 0,31)\cdot 10^{-5} $ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/turboevak.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Evakuierungsmessungnmessung der Tubromolekularpumpe.}
+  \label{fig:turboevak}
+\end{figure}
 
 \subsection{Drehschieberpumpe}
 \subsubsection{Leckratenmessung}
+Für die Leckratenmessung wurden Messwerte für vier Gleichgewichtsdrücke aufgenommen. Für den ersten
+Gleichgewichtsdruck wurde dreimal gemessen. Die Messwerte und der daraus bestimmte Mittelwert sind in
+\autoref{tab:pm} zu finden. Der entsprechende Plot ist in \autoref{fig:pm} dargestellt.
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte für den ersten Gleichgewichtsdruck und der daraus resultierende Mittelwert.}
+  \label{tab:pm}
+  \begin{tabular}{c c c c c}
+    \toprule
+  $t/\si{\second}$ & $p_1 /\si{\milli\bar}$ & $p_2 /\si{\milli\bar}$ & $p_3 /\si{\milli\bar}$ & $p_m /\si{\milli\bar}$ \\
+    \midrule
+    $  0$ & $ 1,0 \pm 0,3 $ & $ 1,0 \pm 0,3 $ & $ 1,0 \pm 0,3 $& $ 1,0 \pm 0,2 $ \\ 
+    $ 10$ & $ 3,3 \pm 1,0 $ & $ 3,5 \pm 1,1 $ & $ 3,2 \pm 1,0 $& $ 3,3 \pm 0,6 $ \\ 
+    $ 20$ & $ 3,7 \pm 1,1 $ & $ 3,9 \pm 1,2 $ & $ 3,6 \pm 1,1 $& $ 3,7 \pm 0,7 $ \\ 
+    $ 30$ & $ 4,0 \pm 1,1 $ & $ 4,1 \pm 1,2 $ & $ 3,9 \pm 1,2 $& $ 4,0 \pm 0,7 $ \\ 
+    $ 40$ & $ 4,3 \pm 1,3 $ & $ 4,4 \pm 1,3 $ & $ 4,2 \pm 1,3 $& $ 4,3 \pm 0,7 $ \\ 
+    $ 50$ & $ 4,5 \pm 1,4 $ & $ 4,6 \pm 1,4 $ & $ 4,5 \pm 1,4 $& $ 4,5 \pm 0,8 $ \\ 
+    $ 60$ & $ 4,8 \pm 1,4 $ & $ 5,0 \pm 1,5 $ & $ 4,8 \pm 1,4 $& $ 4,9 \pm 0,8 $ \\ 
+    $ 70$ & $ 5,2 \pm 1,6 $ & $ 5,4 \pm 1,6 $ & $ 5,2 \pm 1,6 $& $ 5,3 \pm 0,9 $ \\ 
+    $ 80$ & $ 5,5 \pm 1,7 $ & $ 5,7 \pm 1,7 $ & $ 5,5 \pm 1,7 $& $ 5,6 \pm 1,0 $ \\ 
+    $ 90$ & $ 5,8 \pm 1,7 $ & $ 6,0 \pm 1,8 $ & $ 5,8 \pm 1,7 $& $ 5,9 \pm 1,0 $ \\ 
+    $100$ & $ 6,1 \pm 1,8 $ & $ 6,2 \pm 1,9 $ & $ 6,1 \pm 1,8 $& $ 6,1 \pm 1,1 $ \\ 
+    $110$ & $ 6,4 \pm 1,9 $ & $ 6,5 \pm 2,0 $ & $ 6,4 \pm 1,9 $& $ 6,4 \pm 1,1 $ \\ 
+    $120$ & $ 6,6 \pm 2,0 $ & $ 6,7 \pm 2,0 $ & $ 6,6 \pm 2,0 $& $ 6,6 \pm 1,2 $ \\ 
+    $130$ & $ 6,9 \pm 2,1 $ & $ 7,0 \pm 2,1 $ & $ 6,9 \pm 2,1 $& $ 6,9 \pm 1,2 $ \\ 
+    $140$ & $ 7,2 \pm 2,2 $ & $ 7,3 \pm 2,2 $ & $ 7,2 \pm 2,2 $& $ 7,2 \pm 1,3 $ \\ 
+    $150$ & $ 7,4 \pm 2,2 $ & $ 7,6 \pm 2,3 $ & $ 7,5 \pm 2,3 $& $ 7,5 \pm 1,3 $ \\ 
+    $160$ & $ 7,7 \pm 2,3 $ & $ 7,8 \pm 2,3 $ & $ 7,7 \pm 2,3 $& $ 7,7 \pm 1,3 $ \\ 
+    $170$ & $ 7,9 \pm 2,4 $ & $ 8,0 \pm 2,4 $ & $ 8,0 \pm 2,4 $& $ 8,0 \pm 1,4 $ \\ 
+    $180$ & $ 8,1 \pm 2,4 $ & $ 8,3 \pm 2,5 $ & $ 8,1 \pm 2,4 $& $ 8,2 \pm 1,4 $ \\ 
+    $190$ & $ 8,4 \pm 2,5 $ & $ 8,5 \pm 2,6 $ & $ 8,4 \pm 2,5 $& $ 8,4 \pm 1,5 $ \\ 
+    $200$ & $ 8,5 \pm 2,6 $ & $ 8,7 \pm 2,6 $ & $ 8,6 \pm 2,6 $& $ 8,6 \pm 1,5 $ \\ 
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/pm.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe.}
+  \label{fig:pm}
+\end{figure}
+
+Die Messwerte der anderen drei Gleichgewichtsdrücke sind in \autoref{tab:drehleck} dargestellt. Die entsprechenden
+Plots sind in \autoref{fig:drehleck1}, \autoref{fig:drehleck2} und \autoref{fig:drehleck3} zu finden.
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte für drei andere Gleichgewichtsdrücke.}
+  \label{tab:drehleck}
+  \begin{tabular}{c c c c}
+    \toprule
+    $t/\si{\second}$ & $p_4 /\si{\milli\bar}$ & $p_5 /\si{\milli\bar}$ & $p_6 /\si{\milli\bar}$ \\
+    \midrule
+    $  0$ & $ 1,0 \pm 0,3 $ & $ 1,0 \pm 0,3 $ & $ 1,0 \pm 0,3 $ \\ 
+    $ 10$ & $ 3,3 \pm 1,0 $ & $ 3,5 \pm 1,1 $ & $ 3,2 \pm 1,0 $ \\ 
+    $ 20$ & $ 3,7 \pm 1,1 $ & $ 3,9 \pm 1,2 $ & $ 3,6 \pm 1,1 $ \\ 
+    $ 30$ & $ 4,0 \pm 1,1 $ & $ 4,1 \pm 1,2 $ & $ 3,9 \pm 1,2 $ \\ 
+    $ 40$ & $ 4,3 \pm 1,3 $ & $ 4,4 \pm 1,3 $ & $ 4,2 \pm 1,3 $ \\ 
+    $ 50$ & $ 4,5 \pm 1,4 $ & $ 4,6 \pm 1,4 $ & $ 4,5 \pm 1,4 $ \\ 
+    $ 60$ & $ 4,8 \pm 1,4 $ & $ 5,0 \pm 1,5 $ & $ 4,8 \pm 1,4 $ \\ 
+    $ 70$ & $ 5,2 \pm 1,6 $ & $ 5,4 \pm 1,6 $ & $ 5,2 \pm 1,6 $ \\ 
+    $ 80$ & $ 5,5 \pm 1,7 $ & $ 5,7 \pm 1,7 $ & $ 5,5 \pm 1,7 $ \\ 
+    $ 90$ & $ 5,8 \pm 1,7 $ & $ 6,0 \pm 1,8 $ & $ 5,8 \pm 1,7 $ \\ 
+    $100$ & $ 6,1 \pm 1,8 $ & $ 6,2 \pm 1,9 $ & $ 6,1 \pm 1,8 $ \\ 
+    $110$ & $ 6,4 \pm 1,9 $ & $ 6,5 \pm 2,0 $ & $ 6,4 \pm 1,9 $ \\ 
+    $120$ & $ 6,6 \pm 2,0 $ & $ 6,7 \pm 2,0 $ & $ 6,6 \pm 2,0 $ \\ 
+    $130$ & $ 6,9 \pm 2,1 $ & $ 7,0 \pm 2,1 $ & $ 6,9 \pm 2,1 $ \\ 
+    $140$ & $ 7,2 \pm 2,2 $ & $ 7,3 \pm 2,2 $ & $ 7,2 \pm 2,2 $ \\ 
+    $150$ & $ 7,4 \pm 2,2 $ & $ 7,6 \pm 2,3 $ & $ 7,5 \pm 2,3 $ \\ 
+    $160$ & $ 7,7 \pm 2,3 $ & $ 7,8 \pm 2,3 $ & $ 7,7 \pm 2,3 $ \\ 
+    $170$ & $ 7,9 \pm 2,4 $ & $ 8,0 \pm 2,4 $ & $ 8,0 \pm 2,4 $ \\ 
+    $180$ & $ 8,1 \pm 2,4 $ & $ 8,3 \pm 2,5 $ & $ 8,1 \pm 2,4 $ \\ 
+    $190$ & $ 8,4 \pm 2,5 $ & $ 8,5 \pm 2,6 $ & $ 8,4 \pm 2,5 $ \\ 
+    $200$ & $ 8,5 \pm 2,6 $ & $ 8,7 \pm 2,6 $ & $ 8,6 \pm 2,6 $ \\ 
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/p4.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe.}
+  \label{fig:drehleck1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/p5.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe.}
+  \label{fig:drehleck2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/p6.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe.}
+  \label{fig:drehleck3}
+\end{figure}
+
 \subsubsection{Evakuierungsmessung}
+Die Messwerte der Evakuierungsmessung der Drehschieberpumpe sind in \autoref{tab:drehevak} dargestellt. In
+\autoref{fig:drehevak} ist $ln(\frac{p(t)-p_0}{p_0 - p_E})$ gegen die Zeit $t$ in $\si{\second}$ aufgetragen.
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Evakuierungsmessung der Drehschieberpumpe.}
+  \label{tab:drehevak}
+  \begin{tabular}{c c | c c}
+    \toprule
+    $t/\si{\second}$ & $p/\si{\milli\bar}$ & $t/\si{\second}$ & $p/\si{\milli\bar}$ \\ 
+    \midrule
+    $  0$ & $997,1 \pm 299,1$  & $310$ & $ 0,60 \pm 0,18 $ \\ 
+    $ 10$ & $649,1 \pm 194,7$  & $320$ & $ 0,55 \pm 0,17 $ \\
+    $ 20$ & $479,6 \pm 143,9$  & $330$ & $ 0,52 \pm 0,16 $ \\
+    $ 30$ & $355,2 \pm 106,6$  & $340$ & $ 0,47 \pm 0,14 $ \\
+    $ 40$ & $263,7 \pm  79,1$  & $350$ & $ 0,45 \pm 0,14 $ \\
+    $ 50$ & $190,6 \pm  57,2$  & $360$ & $ 0,42 \pm 0,13 $ \\
+    $ 60$ & $139,0 \pm  41,7$  & $370$ & $ 0,40 \pm 0,12 $ \\
+    $ 70$ & $100,9 \pm  30,3$  & $380$ & $ 0,38 \pm 0,11 $ \\
+    $ 80$ & $ 72,5 \pm  21,8$  & $390$ & $ 0,36 \pm 0,11 $ \\
+    $ 90$ & $ 52,3 \pm  15,7$  & $400$ & $ 0,33 \pm 0,10 $ \\
+    $100$ & $ 36,9 \pm  11,1$  & $410$ & $ 0,32 \pm 0,10 $ \\
+    $110$ & $ 26,2 \pm   7,9$  & $420$ & $ 0,30 \pm 0,09 $ \\
+    $120$ & $ 18,2 \pm   5,5$  & $430$ & $ 0,29 \pm 0,09 $ \\
+    $130$ & $ 13,2 \pm   4,0$  & $440$ & $ 0,28 \pm 0,08 $ \\
+    $140$ & $ 10,0 \pm   3,0$  & $450$ & $ 0,27 \pm 0,08 $ \\
+    $150$ & $  7,7 \pm   2,3$  & $460$ & $ 0,26 \pm 0,08 $ \\
+    $160$ & $  6,0 \pm   1,8$  & $470$ & $ 0,25 \pm 0,07 $ \\
+    $170$ & $  4,4 \pm   1,3$  & $480$ & $ 0,24 \pm 0,07 $ \\
+    $180$ & $  3,5 \pm   1,1$  & $490$ & $ 0,23 \pm 0,07 $ \\
+    $190$ & $  2,8 \pm   0,8$  & $500$ & $ 0,22 \pm 0,07 $ \\
+    $200$ & $  2,2 \pm   0,6$  & $510$ & $ 0,21 \pm 0,06 $ \\
+    $210$ & $  1,9 \pm   0,5$  & $520$ & $ 0,20 \pm 0,06 $ \\
+    $220$ & $  1,6 \pm   0,4$  & $530$ & $ 0,19 \pm 0,06 $ \\
+    $230$ & $  1,4 \pm   0,4$  & $540$ & $ 0,19 \pm 0,06 $ \\
+    $240$ & $  1,2 \pm   0,3$  & $550$ & $ 0,18 \pm 0,05 $ \\
+    $250$ & $  1,0 \pm   0,3$  & $560$ & $ 0,17 \pm 0,05 $ \\
+    $260$ & $  0,3 \pm  0,2$   & $570$ & $ 0,17 \pm 0,05 $ \\
+    $270$ & $  0,4 \pm  0,2$   & $580$ & $ 0,16 \pm 0,05 $ \\
+    $280$ & $  0,6 \pm  0,2$   & $590$ & $ 0,15 \pm 0,04 $ \\
+    $290$ & $  0,0 \pm  0,2$   & $600$ & $ 0,15 \pm 0,04 $ \\
+    $300$ & $  0,3 \pm  0,2$   &       & $ $ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/drehevak.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Evakuierungsmessungnmessung der Drehschieberpumpe.}
+  \label{fig:drehevak}
+\end{figure}

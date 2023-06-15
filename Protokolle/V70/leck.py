@@ -34,6 +34,7 @@ plt.close()
 print('Drehschieber:')
 t, p1, p2, p3, p4, p5, p6 = np.genfromtxt('content/data/drehschieber/leckrate.txt', unpack=True)
 p1err, p2err, p3err, p4err, p5err, p6err = np.genfromtxt('content/data/drehschieber/pleckerr.txt', unpack=True)
+pm, pmerr = np.genfromtxt('content/data/drehschieber/pm.txt', unpack=True)
 
 # p1
 # Fit
@@ -183,4 +184,29 @@ plt.legend(loc='best')
 
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/p6.pdf')
+plt.close()
+
+# pm
+# Fit
+params, covariance_matrix = np.polyfit(t, pm, deg=1, cov=True)
+
+errors = np.sqrt(np.diag(covariance_matrix))
+print('p1:')
+for name, value, error in zip('ab', params, errors):
+    print(f'{name} = {value:.3f} ± {error:.3f}')
+
+# Plot
+plt.errorbar(t, p1, yerr=pmerr, fmt='o', label='Messwerte')
+plt.plot(
+    t,
+    params[0] * t + params[1],
+    label='Lineare Regression',
+    linewidth=3,
+)
+plt.xlabel(r'$t/s$')
+plt.ylabel(r'$p_{1}/ mbar$')
+plt.legend(loc='best')
+
+plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.savefig('build/pm.pdf')
 plt.close()
