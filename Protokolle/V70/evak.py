@@ -94,7 +94,7 @@ params, covariance_matrix = np.polyfit(t[0:22], unp.nominal_values(x[0:22]), deg
 errors = np.sqrt(np.diag(covariance_matrix))
 
 for name, value, error in zip('ab', params, errors):
-    print(f'{name} = {value:.3f} ± {error:.3f}')
+    print(f'{name} = {value:.3f} ± {error}')
 
 plt.plot(
     t[0:22],
@@ -110,7 +110,7 @@ params, covariance_matrix = np.polyfit(t[22:59], unp.nominal_values(x[22:59]), d
 errors = np.sqrt(np.diag(covariance_matrix))
 
 for name, value, error in zip('ab', params, errors):
-    print(f'{name} = {value:.3f} ± {error:.3f}')
+    print(f'{name} = {value:.3f} ± {error}')
 
 plt.plot(
     t[22:59],

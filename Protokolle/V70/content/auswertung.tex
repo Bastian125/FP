@@ -5,7 +5,7 @@
 \subsubsection{Leckratenmessung}
 Es wird für die Leckratenmessung der Turbomolekularpumpe eine Messreihe aufgenommen. Die Messwerte sind in
 \autoref{tab:turboleck} zu finden. In \autoref{fig:turboleck} ist der Druck $p$ in $\si{\milli\bar}$ gegen die
-Zeit $t$ in $\si{\second}$ aufgetragen.
+Zeit $t$ in $\si{\second}$ aufgetragen. Der Gleichgewichtsdruck ist $p \approx 6 \cdot 10^{-5} \,\si{\milli\bar}$.
 \begin{table}[H]
   \centering
   \caption{Leckratenmessung der Turbomolekularpumpe}
@@ -49,6 +49,15 @@ Zeit $t$ in $\si{\second}$ aufgetragen.
   \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Tubromolekularpumpe.}
   \label{fig:turboleck}
 \end{figure}
+Außerdem wurde eine lineare Regression der Form $f(x) = ax +b$ durchgeführt. Dadurch lässt sich das Saugvermögen
+$S$ durch $S = \frac{V}{p_G}\cdot a$bestimmen. Die Turbomolekularpumpe hat dabei ein Volumen von
+$V = (33 \pm 0,1) \,\si{\liter}$. 
+\begin{align*}
+  a &= (5,30 \pm 0,02)\cdot 10^{-5} \si{\milli\bar\per\second} \\
+  p_G &= (6,00 \pm 1,80) \cdot 10^{-5} \si{\milli\bar} \\
+  S &= (29 \pm 9)\,\si{\liter\per\second}
+\end{align*}
+bestimmen.
 
 \subsubsection{Evakuierungsmessung}
 Es wurden für den Startdruck $p_{0} \approx 5\cdot 10^{-3}\,\si{\milli\bar}$ drei Messreihen aufgenommen und
@@ -100,11 +109,25 @@ $t$ in $\si{\second}$ aufgetragen. Die entsprechenden Werte und die dazu passend
   \label{fig:turboevak}
 \end{figure}
 
+Es wurden für zwei Bereiche jeweils lineare Ausgleichsrechnungen der Form $f(x)=ax+b$ durchgeführt und deren
+Parameter bestimmt. Aus $S=-aV$ lässt sich das Saugvermögen der Pumpe bestimmen. Für den ersten Bereich ergibt
+sich
+\begin{align*}
+  a &= (-0,312 \pm 0,044)\,\si{\per\second}\\
+  S &= (10,3 \pm 1,5)\,\si{\liter\per\second}.
+\end{align*}
+Und für den zweiten Bereich
+\begin{align*}
+  a &= (-0,038 \pm 0,001)\,\si{\per\second}\\
+  S &=(1,254 \pm 0,033)\,\si{\liter\per\second}.
+\end{align*}
+
 \subsection{Drehschieberpumpe}
 \subsubsection{Leckratenmessung}
 Für die Leckratenmessung wurden Messwerte für vier Gleichgewichtsdrücke aufgenommen. Für den ersten
-Gleichgewichtsdruck wurde dreimal gemessen. Die Messwerte und der daraus bestimmte Mittelwert sind in
-\autoref{tab:pm} zu finden. Der entsprechende Plot ist in \autoref{fig:pm} dargestellt.
+Gleichgewichtsdruck von $p_{1, 2, 3} \approx \SI{1,0}{\milli\bar}$ wurde dreimal gemessen.
+Die Messwerte und der daraus bestimmte Mittelwert sind in \autoref{tab:pm} zu finden. Der entsprechende Plot
+ist in \autoref{fig:pm} dargestellt.
 
 \begin{table}[H]
   \centering
@@ -148,36 +171,39 @@ Gleichgewichtsdruck wurde dreimal gemessen. Die Messwerte und der daraus bestimm
 
 Die Messwerte der anderen drei Gleichgewichtsdrücke sind in \autoref{tab:drehleck} dargestellt. Die entsprechenden
 Plots sind in \autoref{fig:drehleck1}, \autoref{fig:drehleck2} und \autoref{fig:drehleck3} zu finden.
+Die weiteren Gleichgewichtsdrücke sind
+$p_4 \approx 10 \cdot \,\si{\milli\bar}$, $p_5 \approx 50 \cdot \,\si{\milli\bar}$ und
+$p_6 \approx 100 \cdot \,\si{\milli\bar}$.
 
 \begin{table}[H]
   \centering
-  \caption{Messwerte für drei andere Gleichgewichtsdrücke.}
+  \caption{Messwerte für die drei anderen Gleichgewichtsdrücke.}
   \label{tab:drehleck}
   \begin{tabular}{c c c c}
     \toprule
     $t/\si{\second}$ & $p_4 /\si{\milli\bar}$ & $p_5 /\si{\milli\bar}$ & $p_6 /\si{\milli\bar}$ \\
     \midrule
-    $  0$ & $ 1,0 \pm 0,3 $ & $ 1,0 \pm 0,3 $ & $ 1,0 \pm 0,3 $ \\ 
-    $ 10$ & $ 3,3 \pm 1,0 $ & $ 3,5 \pm 1,1 $ & $ 3,2 \pm 1,0 $ \\ 
-    $ 20$ & $ 3,7 \pm 1,1 $ & $ 3,9 \pm 1,2 $ & $ 3,6 \pm 1,1 $ \\ 
-    $ 30$ & $ 4,0 \pm 1,1 $ & $ 4,1 \pm 1,2 $ & $ 3,9 \pm 1,2 $ \\ 
-    $ 40$ & $ 4,3 \pm 1,3 $ & $ 4,4 \pm 1,3 $ & $ 4,2 \pm 1,3 $ \\ 
-    $ 50$ & $ 4,5 \pm 1,4 $ & $ 4,6 \pm 1,4 $ & $ 4,5 \pm 1,4 $ \\ 
-    $ 60$ & $ 4,8 \pm 1,4 $ & $ 5,0 \pm 1,5 $ & $ 4,8 \pm 1,4 $ \\ 
-    $ 70$ & $ 5,2 \pm 1,6 $ & $ 5,4 \pm 1,6 $ & $ 5,2 \pm 1,6 $ \\ 
-    $ 80$ & $ 5,5 \pm 1,7 $ & $ 5,7 \pm 1,7 $ & $ 5,5 \pm 1,7 $ \\ 
-    $ 90$ & $ 5,8 \pm 1,7 $ & $ 6,0 \pm 1,8 $ & $ 5,8 \pm 1,7 $ \\ 
-    $100$ & $ 6,1 \pm 1,8 $ & $ 6,2 \pm 1,9 $ & $ 6,1 \pm 1,8 $ \\ 
-    $110$ & $ 6,4 \pm 1,9 $ & $ 6,5 \pm 2,0 $ & $ 6,4 \pm 1,9 $ \\ 
-    $120$ & $ 6,6 \pm 2,0 $ & $ 6,7 \pm 2,0 $ & $ 6,6 \pm 2,0 $ \\ 
-    $130$ & $ 6,9 \pm 2,1 $ & $ 7,0 \pm 2,1 $ & $ 6,9 \pm 2,1 $ \\ 
-    $140$ & $ 7,2 \pm 2,2 $ & $ 7,3 \pm 2,2 $ & $ 7,2 \pm 2,2 $ \\ 
-    $150$ & $ 7,4 \pm 2,2 $ & $ 7,6 \pm 2,3 $ & $ 7,5 \pm 2,3 $ \\ 
-    $160$ & $ 7,7 \pm 2,3 $ & $ 7,8 \pm 2,3 $ & $ 7,7 \pm 2,3 $ \\ 
-    $170$ & $ 7,9 \pm 2,4 $ & $ 8,0 \pm 2,4 $ & $ 8,0 \pm 2,4 $ \\ 
-    $180$ & $ 8,1 \pm 2,4 $ & $ 8,3 \pm 2,5 $ & $ 8,1 \pm 2,4 $ \\ 
-    $190$ & $ 8,4 \pm 2,5 $ & $ 8,5 \pm 2,6 $ & $ 8,4 \pm 2,5 $ \\ 
-    $200$ & $ 8,5 \pm 2,6 $ & $ 8,7 \pm 2,6 $ & $ 8,6 \pm 2,6 $ \\ 
+    $  0$ & $ 10,0 \pm  3,0 $ & $  50,0 \pm  15,0 $ & $ 100,0 \pm  30,0 $ \\ 
+    $ 10$ & $ 18,7 \pm  5,6 $ & $  77,3 \pm  23,2 $ & $ 144,4 \pm  43,3 $ \\ 
+    $ 20$ & $ 23,0 \pm  6,9 $ & $  95,7 \pm  28,7 $ & $ 187,8 \pm  56,3 $ \\ 
+    $ 30$ & $ 27,2 \pm  8,2 $ & $ 114,2 \pm  34,3 $ & $ 211,7 \pm  63,5 $ \\ 
+    $ 40$ & $ 31,0 \pm  9,3 $ & $ 132,5 \pm  39,8 $ & $ 245,9 \pm  73,8 $ \\ 
+    $ 50$ & $ 35,8 \pm 10,7 $ & $ 150,9 \pm  45,3 $ & $ 280,1 \pm  84,0 $ \\ 
+    $ 60$ & $ 40,0 \pm 12,0 $ & $ 169,3 \pm  50,8 $ & $ 314,4 \pm  94,3 $ \\ 
+    $ 70$ & $ 44,8 \pm 13,4 $ & $ 187,7 \pm  56,3 $ & $ 348,5 \pm 105,0 $ \\ 
+    $ 80$ & $ 48,6 \pm 14,6 $ & $ 205,2 \pm  61,6 $ & $ 382,6 \pm 115,0 $ \\ 
+    $ 90$ & $ 53,0 \pm 15,9 $ & $ 223,6 \pm  67,1 $ & $ 416,9 \pm 125,0 $ \\ 
+    $100$ & $ 57,2 \pm 17,2 $ & $ 242,1 \pm  72,6 $ & $ 450,0 \pm 135,0 $ \\ 
+    $110$ & $ 61,5 \pm 18,4 $ & $ 260,3 \pm  78,1 $ & $ 483,6 \pm 145,0 $ \\ 
+    $120$ & $ 66,1 \pm 19,8 $ & $ 280,7 \pm  84,2 $ & $ 516,4 \pm 155,0 $ \\ 
+    $130$ & $ 70,4 \pm 21,1 $ & $ 300,9 \pm  90,3 $ & $ 549,9 \pm 165,0 $ \\ 
+    $140$ & $ 75,2 \pm 22,6 $ & $ 315,5 \pm  94,6 $ & $ 581,2 \pm 174,0 $ \\ 
+    $150$ & $ 78,4 \pm 23,5 $ & $ 334,1 \pm 100,0 $ & $ 612,7 \pm 184,0 $ \\ 
+    $160$ & $ 82,8 \pm 24,8 $ & $ 352,3 \pm 106,0 $ & $ 643,4 \pm 193,0 $ \\ 
+    $170$ & $ 87,1 \pm 26,1 $ & $ 370,8 \pm 111,0 $ & $ 673,1 \pm 202,0 $ \\ 
+    $180$ & $ 91,3 \pm 27,4 $ & $ 389,9 \pm 117,0 $ & $ 702,0 \pm 211,0 $ \\ 
+    $190$ & $ 95,5 \pm 28,6 $ & $ 407,2 \pm 122,0 $ & $ 729,9 \pm 219,0 $ \\ 
+    $200$ & $ 99,8 \pm 29,9 $ & $ 425,6 \pm 128,0 $ & $ 756,5 \pm 227,0 $ \\ 
     \bottomrule
   \end{tabular}
 \end{table}
@@ -185,23 +211,56 @@ Plots sind in \autoref{fig:drehleck1}, \autoref{fig:drehleck2} und \autoref{fig:
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{build/p4.pdf}
-  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe.}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe mit dem
+  Gleichgewichtsdruck $p_4 \approx 10 \cdot \,\si{\milli\bar}$.}
   \label{fig:drehleck1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{build/p5.pdf}
-  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe.}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe mit dem
+  Gleichgewichtsdruck $p_5 \approx 50 \cdot \,\si{\milli\bar}$.}
   \label{fig:drehleck2}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{build/p6.pdf}
-  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe.}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Drehschieberpumpe mit dem
+  Gleichgewichtsdruck $p_6 \approx 100 \cdot \,\si{\milli\bar}$.}
   \label{fig:drehleck3}
 \end{figure}
+Analog zur Turbomolekularpumpe wurden wieder lineare Ausgleichsrechnungen durchgeführt und das Saugvermögen bestimmt.
+Der einzige Unterschied besteht darin, dass das Volumen nun $V=(34 \pm 0.1)\,\si{\liter}$ beträgt.
+Für den gemittelten Druck ergibts sich
+\begin{align*}
+  a &= (0,03 \pm 0,002)\cdot \si{\milli\bar\per\second} \\
+  p_G &= (1,00 \pm 0,2)  \si{\milli\bar} \\
+  S &= (1,02 \pm 0,22)\,\si{\liter\per\second}.
+\end{align*}
+
+Für $p_4$ ergibt sich
+\begin{align*}
+  a &= (0,43 \pm 0,003)\cdot \si{\milli\bar\per\second} \\
+  p_G &= (10,0 \pm 3,0)  \si{\milli\bar} \\
+  S &= (1,5 \pm 0,4)\,\si{\liter\per\second}.
+\end{align*}
+
+Für $p_5$ ergibt sich
+\begin{align*}
+  a &= (1,85 \pm 0,008)\cdot \si{\milli\bar\per\second} \\
+  p_G &= (50,0 \pm 15,0)  \si{\milli\bar} \\
+  S &= (1,3 \pm 0,4)\,\si{\liter\per\second}.
+\end{align*}
+
+Für $p_6$ ergibt sich
+\begin{align*}
+  a &= (3,28 \pm 0,026) \si{\milli\bar\per\second} \\
+  p_G &= (100,0 \pm 30,0) \si{\milli\bar} \\
+  S &= (1,12 \pm 0,33)\,\si{\liter\per\second}.
+\end{align*}
+
 
 \subsubsection{Evakuierungsmessung}
 Die Messwerte der Evakuierungsmessung der Drehschieberpumpe sind in \autoref{tab:drehevak} dargestellt. In
@@ -256,3 +315,16 @@ Die Messwerte der Evakuierungsmessung der Drehschieberpumpe sind in \autoref{tab
   \caption{Grafische Darstellung der Messwerte für die Evakuierungsmessungnmessung der Drehschieberpumpe.}
   \label{fig:drehevak}
 \end{figure}
+
+Es wurden für zwei Bereiche jeweils lineare Ausgleichsrechnungen der Form $f(x)=ax+b$ durchgeführt und deren
+Parameter bestimmt. Aus $S=-aV$ lässt sich das Saugvermögen der Pumpe bestimmen. Für den ersten Bereich ergibt
+sich
+\begin{align*}
+  a &= (-0,031 \pm 0,0004)\,\si{\per\second}\\
+  S &= (1,254 \pm 0,014)\,\si{\liter\per\second}.
+\end{align*}
+Und für den zweiten Bereich
+\begin{align*}
+  a &= (-0,011 \pm 0,0003)\,\si{\per\second}\\
+  S &= (0,363 \pm 0,010)\,\si{\liter\per\second}.
+\end{align*}
