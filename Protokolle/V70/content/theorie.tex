@@ -17,7 +17,7 @@ die ein sehr gutes Vakuum erforden, um Wechselwirkungen mit Gasteilchen zu verhi
 \subsection{Theoretische Grundlagen}
 
 Da ein perfektes Vakuum in der Praxis unmöglich zu erreichen ist, wird das Vakuum über verschiedene
-Druckbereiche definiert. Erst ab Drücken von $p < \qty{300}{\milli\bar}$ wird der Begriff Vakuum verwendet,
+Druckbereiche definiert. Erst ab Drücken von $p < \qty{300}{\milli\bar}$ \cite{Vakuum_Definition} wird der Begriff Vakuum verwendet,
 da größere Drücke noch auf der Erdoberfläche anzutreffen sind.
 In \autoref{tab:druecke} sind die verschiedenen Druckbereiche mit der dazugehörigen Definition des Vakuums
 aufgeführt. In diesem Versuch wird maximal die Größenordnung eines Hochvakuums erreicht.
@@ -52,7 +52,7 @@ Bei konstanter Temperatur folgt sofort das Boyle-Mariott’schen Gesetz
 was einen antiproportionalen Zusammenhang zwischen $p$ und $V$ vorhersagt.
 Die getroffenen Anahmen sind jedoch nicht für alle Komponenten der Atmosphäre anwendbar, zum Beispiel die stark polarisierten
 Wassermoleküle im Wasserdampf wechselwirken stark miteinander, und die oben beschriebenen Zusammenhänge verlieren ihre Gültigkeit.
-Um niedrige Drücke erreichen zu können, müssen derartige Verunreinigungen aus dem System entfernt werden.\\
+Um niedrige Drücke erreichen zu können, müssen Verunreinigungen aus dem System entfernt werden.\\
 
 Die gemeinsame Bewegung der Gasteilchen wird auch als \textit{Strömung} bezeichnet und hängt stark vom vorherrschenden Druck ab.
 Je geringer der Druck, desto weniger Gasteilchen befinden sich im System und umso weniger Stöße finden untereinander statt.
@@ -90,14 +90,14 @@ Als Saugleistung bezeichnet man das Produkt aus Saugvermögen und Druck
     \label{eqn:saugleistung}
     q_{\text{pV}} = S \cdot P.
 \end{equation}
-In der Praxis wird die theoretische Saugleistung $S_0$ einer Pumpe nie ganz erreicht, da das sich zwangsläufig davorbefindende
+In der Praxis wird das theoretische Saugvermögen $S_0$ einer Pumpe nie ganz erreicht, da das sich zwangsläufig davorbefindende
 Rohr einen Leitwert $L$ hat, der die Gasmenge begrenzt. Dieser kann analog zu einem reziproken elektrischen Widerstand verstanden werden.
 Daher wird die effektive Saugleistung $S_{\text{eff}}$ verwendet, die sich gemäß
 \begin{equation}
     \label{eqn:saugleistung_eff}
     \frac{1}{S_{\text{eff}}} = \frac{1}{S_{0}} + \frac{1}{L}
 \end{equation}
-berechnet. In der Regel ist das Saugvermögen einer Pumpe nicht konstant, sondern Abhängig vom Druck.
+berechnet \cite{Leitwert}. In der Regel ist das Saugvermögen einer Pumpe nicht konstant, sondern Abhängig vom Druck.
 Nimmt man jedoch vereinfacht ein konstantes Saugvermögen an, so kann durch zeitliches Ableiten der Zustandsgleichung \eqref{eqn:gasgleichung}
 die Differentialgleichung
 \begin{equation}
@@ -110,7 +110,7 @@ aufgestellt werden. Deren Lösung beschreibt die sogenannte Evakuierungskurve $p
     p(t) = p_0 \cdot \exp{\left(-\frac{S}{V}\,t\right)}.
 \end{equation}
 beschreibt.
-Ein System ist nie vollständig dicht, der Druckabfall durch verschiedene Lecks wird du die Leckrate
+Ein System ist nie vollständig dicht, der Druckabfall durch verschiedene Lecks wird durch die Leckrate
 \begin{equation}
     \label{eqn:leckrate}
     Q = \frac{\symup{\Delta} p}{\symup{\Delta} t}\cdot V
@@ -125,8 +125,9 @@ Dafür muss der Gleichgewichtsdruck $p_{\text{G}}$ bekannt sein. Bei diesem Druc
 Undichtigkeiten der Lecks aus, sodass ein Gleichgewicht entsteht. \\
 Für unterschiedliche Druckbereiche gibt es verschiedene Funktionsprinzipien von Pumpen, in diesem Versuch werden zwei Typen von Vakuumpumpen verwendet:
 \begin{enumerate}
-    \item Die \textbf{Drehschieberpumpe} zählt zur Kategorie der Transport- bzw. Verdrängerpumpen, das Arbeitsprinzip ist also der Abtransport von Gas
-    durch Ansaugung und anschließende Verdrängung. Eine Skizze ihres Aufbaus ist in \autoref{fig:Drehschieberpumpe} zu sehen.
+    \item Die \textbf{Drehschieberpumpe} zählt zur Kategorie der Transport- bzw. Verdrängerpumpen, das Arbeitsprinzip ist also der Abtransport von Gas.
+    Dies geschieht durch eine Ausdehnung des Volumens auf der Ansaugseite und einer Volumenverringerung mit resultierender Verdrängung auf der Auslassseite.
+    Eine Skizze ihres Aufbaus ist in \autoref{fig:Drehschieberpumpe} zu sehen.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{content/pics/drehschieberpumpe.png}
@@ -139,8 +140,8 @@ Für unterschiedliche Druckbereiche gibt es verschiedene Funktionsprinzipien von
     öffnet das Auslassventil und das Gas entweicht aus der Pumpe. In der Pumpe befindet sich zu jeder Zeit eine kleine Menge Öl, das
     eine Schmierung der Lager sowie eine saubere Abdichtung der Schieber und Ventile gewährleistet. Aufgrund der limitierten Kompressionsfähigkeit
     im Arbeitsraum durch konstruktionstechnisch bedingte Restvolumina ist der Druckbereich der Pumpe limitiert.
-    Einstufige Ausführungen erreichen typischerweise Enddrücke von $\qty{0.1}{\milli\bar}$, durch weitere Stufen kann dies weiter verringert werden.
-    Eine Drehschieberpumpe eignet sich somit zur Erzeugung eines Vorvakuus, das anschließend mit Pumpen anderer Bauart verfeinert werden kann.
+    Einstufige Ausführungen erreichen typischerweise Enddrücke von $\qty{0.1}{\milli\bar}$ \cite{Pfeiffer_Drehschieberpumpe}, durch weitere Stufen kann dies weiter verringert werden.
+    Eine Drehschieberpumpe eignet sich somit zur Erzeugung eines Vorvakuums, das anschließend mit Pumpen anderer Bauart verbessert werden kann.
     \item Bei gegebenen Vorvakuum kann der Druck mithilfe einer \textbf{Turbomolekularpumpe} weiter verringert werden.
     In \autoref{fig:Turbo} ist der grobe Aufbau dargestellt.
     Die Turbomolekularpumpe zählt zu den kinetischen Pumpen. Ein Rotor mit Schaufeln führt den Gasteilchen kinetische Energie zu, sodass sie
@@ -152,7 +153,7 @@ Für unterschiedliche Druckbereiche gibt es verschiedene Funktionsprinzipien von
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{content/pics/turbo.png}
-        \caption{Schematische Darstellung des Aufbaus einer Turbomolekularpumpe. \cite{Turbopumpe}.}
+        \caption{Schematische Darstellung des Aufbaus einer Turbomolekularpumpe \cite{Turbopumpe}.}
         \label{fig:Turbo}
     \end{figure}
 \end{enumerate}
@@ -161,13 +162,13 @@ Für unterschiedliche Druckbereiche gibt es verschiedene Funktionsprinzipien von
 Um die Güte des erzeugten Vakuums zu messen, gibt es je nach Druckbereich verschiedene Messmethoden bzw. Messgeräte.
 \begin{itemize}
     \item Eine \textbf{Pirani-Messröhre} nutzt die Druckabhängigkeit der Wärmeleitfähigkeit von Gasen aus. Durch einen Draht wird
-    soviel Strom geleitet, sodass dieser anfängt zu glühen. Je geringer der Druck, desto schlechter wird die Wärme abgeführt und der
+    soviel Strom geleitet, dass der glühelektrische Effekt auftritt. Je geringer der Druck, desto schlechter wird die Wärme abgeführt und der
     Draht wird heißer. Dadurch erhöht sich der Widerstand, was mithilfe einer Messbrücke nachgewiesen werden kann. Der Widerstand ist somit
-    proportional zum Druck, solange dieser nicht kleiner als $\qty{1e-4}{\milli\bar}$ wird, dann überwiegt die Wärmestrahlung.
-    Auch bei Drücken größer $\qty{10}{\milli\bar}$ ist die Wärmeleitfähigkeit unabhängig vom Druck, dies begrenzt das Messfenster nach oben. \cite{Druckmessung}
+    proportional zum Druck, solange dieser nicht kleiner als $\qty{1e-4}{\milli\bar}$ \cite{Druckmessung} wird, dann überwiegt die Wärmestrahlung.
+    Bei Drücken größer $\qty{10}{\milli\bar}$ ist die Wärmeleitfähigkeit nicht mehr linear abhängig vom Druck, dies begrenzt das Messfenster nach oben.
     \item Das \textbf{Piezo-Membranvakuummeter} nutzt die den Druck ausgelöste Kraft auf eine Fäche. Auf einer Membran platzierte Piezo-Kristalle
     verändern wegen deren Durchbiegung ihre Länge und somit den Widerstand, der dann gemessen werden kann. Diese Messmethode bietet eine hohe Präzision,
-    ab Drücken unter $\qty{1e-5}{\milli\bar}$ wird die Kraft und somit die Durchbiegung jedoch zu gering. \cite{Druckmessung}
+    ab Drücken unter $\qty{1e-5}{\milli\bar}$ \cite{Druckmessung} wird die Kraft und somit die Durchbiegung jedoch zu gering.
     \item Niedrigere Druckbereiche können mit \textbf{Ionisationsvakuumetern} gemessen werden, diese Beruhen auf der Ionisation der Gasatome mithilfe von
     Elektronen. Zwischen einer Anode und Kathode werden Elektronen beschleunigt, die Hüllenelektronen der Gasatome aus der äußeren Schale stoßen.
     Die Gasatome sind anschließend Ionisiert und verursachen einen messbaren Ionisationsstrom. Da mit sinkendem Druck die Anzahl an Gasatomen abnimmt,
