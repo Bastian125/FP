@@ -27,8 +27,9 @@ pe = p[24]
 p = p[0:23]
 t = t[0:23]
 x = unp.log((p - pe)/(p0 - pe))
+print(x)
 
-plt.errorbar(t, unp.nominal_values(x), yerr=unp.std_devs(x), fmt='o', label='Messwerte')
+plt.errorbar(t, unp.nominal_values(x), yerr=unp.std_devs(x), fmt='.k', label='Messwerte')
 # Fit 1
 print('Fit 1')
 params, covariance_matrix = np.polyfit(t[0:4], unp.nominal_values(x[0:4]), deg=1, cov=True)
@@ -84,8 +85,12 @@ pe = p[60]
 p = p[0:59]
 t = t[0:59]
 x = unp.log((p - pe)/(p0 - pe))
+xnom = unp.nominal_values(x)
+xstd =  unp.std_devs(x)
+#np.savetxt('content/data/drehschieber/log.txt', np.round(xnom, decimals=2))
+#np.savetxt('content/data/drehschieber/logerr.txt', np.round(xstd, decimals=2))
 
-plt.errorbar(t, unp.nominal_values(x), yerr=unp.std_devs(x), fmt='o', label='Messwerte', markersize=3)
+plt.errorbar(t, unp.nominal_values(x), yerr=unp.std_devs(x), fmt='.k', label='Messwerte', markersize=3)
 
 # Fit 1
 print('Fit 1')

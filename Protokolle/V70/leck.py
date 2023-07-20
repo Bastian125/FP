@@ -15,7 +15,7 @@ for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
 # Plot
-plt.errorbar(t, p*10**(3), yerr=perr*10**(3), fmt='o', label='Messwerte')
+plt.errorbar(t, p*10**(3), yerr=perr*10**(3), fmt='.k', label='Messwerte', capsize=1)
 plt.plot(
     t,
     params[0] * t + params[1],
@@ -46,7 +46,7 @@ for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
 # Plot
-plt.errorbar(t, p1, yerr=p1err, fmt='o', label='Messwerte')
+plt.errorbar(t, p1, yerr=p1err, fmt='.k', label='Messwerte', capsize=1)
 plt.plot(
     t,
     params[0] * t + params[1],
@@ -71,7 +71,7 @@ for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
 # Plot
-plt.errorbar(t, p2, yerr=p2err, fmt='o', label='Messwerte')
+plt.errorbar(t, p2, yerr=p2err, fmt='.k', label='Messwerte', capsize=1)
 plt.plot(
     t,
     params[0] * t + params[1],
@@ -96,7 +96,7 @@ for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
 # Plot
-plt.errorbar(t, p3, yerr=p3err, fmt='o', label='Messwerte')
+plt.errorbar(t, p3, yerr=p3err, fmt='.k', label='Messwerte', capsize=1)
 plt.plot(
     t,
     params[0] * t + params[1],
@@ -121,7 +121,7 @@ for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
 # Plot
-plt.errorbar(t, p4, yerr=p4err, fmt='o', label='Messwerte')
+plt.errorbar(t, p4, yerr=p4err, fmt='.k', label='Messwerte', capsize=1)
 plt.plot(
     t,
     params[0] * t + params[1],
@@ -146,7 +146,7 @@ for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
 # Plot
-plt.errorbar(t, p5, yerr=p5err, fmt='o', label='Messwerte')
+plt.errorbar(t, p5, yerr=p5err, fmt='.k', label='Messwerte', capsize=1)
 plt.plot(
     t,
     params[0] * t + params[1],
@@ -171,7 +171,7 @@ for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
 # Plot
-plt.errorbar(t, p6, yerr=p6err, fmt='o', label='Messwerte')
+plt.errorbar(t, p6, yerr=p6err, fmt='.k', label='Messwerte', capsize=1)
 plt.plot(
     t,
     params[0] * t + params[1],
@@ -191,12 +191,12 @@ plt.close()
 params, covariance_matrix = np.polyfit(t, pm, deg=1, cov=True)
 
 errors = np.sqrt(np.diag(covariance_matrix))
-print('p1:')
+print('pm:')
 for name, value, error in zip('ab', params, errors):
     print(f'{name} = {value:.3f} ± {error:.3f}')
 
 # Plot
-plt.errorbar(t, p1, yerr=pmerr, fmt='o', label='Messwerte')
+plt.errorbar(t, pm, yerr=pmerr, fmt='.k', label='Messwerte', capsize=1)
 plt.plot(
     t,
     params[0] * t + params[1],
