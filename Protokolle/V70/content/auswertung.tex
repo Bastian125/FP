@@ -3,9 +3,11 @@
 
 \subsection{Turbomolekularpumpe}
 \subsubsection{Leckratenmessung}
-Es wird für die Leckratenmessung der Turbomolekularpumpe eine Messreihe aufgenommen. Die Messwerte sind in
-\autoref{tab:turboleck} zu finden. In \autoref{fig:turboleck} ist der Druck $p$ in $\si{\milli\bar}$ gegen die
-Zeit $t$ in $\si{\second}$ aufgetragen. Der Gleichgewichtsdruck ist $p_G \approx 6 \cdot 10^{-5} \,\si{\milli\bar}$.
+Es wurden für die Leckratenmessung der Turbomolekularpumpe vier Messreihen aufgenommen. Die Messwerte sind in
+\autoref{tab:turboleck} zu finden. In \autoref{fig:turboleck1}, \autoref{fig:turboleck2}, \autoref{fig:turboleck3}
+und \autoref{fig:turboleck4} sind die Gleichgewichtsdrücke $p_{\symup{G}}=(6,00 \pm 1,80) \cdot 10^{-5}$,
+$(0,7 \pm  0,2)\cdot 10^{-4}$, $(2,0 \pm 0,6) \cdot 10^{-4}$ und $(0,50 \pm 0,2) \cdot 10^{-4}$ in
+$\si{\milli\bar}$ aufgetragen.
 \begin{table}[H]
   \centering
   \caption{Leckratenmessung der Turbomolekularpumpe für $p_G \approx 6 \cdot 10^{-5} \,\si{\milli\bar}$.}
@@ -45,19 +47,59 @@ Zeit $t$ in $\si{\second}$ aufgetragen. Der Gleichgewichtsdruck ist $p_G \approx
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{build/turboleck.pdf}
-  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Tubromolekularpumpe.}
-  \label{fig:turboleck}
+  \includegraphics[width=0.8\textwidth]{build/turboleck1.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Tubromolekularpumpe für $p_1$.}
+  \label{fig:turboleck1}
 \end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/turboleck3.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Tubromolekularpumpe für $p_2$.}
+  \label{fig:turboleck2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/turboleck4.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Tubromolekularpumpe für $p_3$.}
+  \label{fig:turboleck3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/turboleck2.pdf}
+  \caption{Grafische Darstellung der Messwerte für die Leckratenmessung der Tubromolekularpumpe für $p_4$.}
+  \label{fig:turboleck4}
+\end{figure}
+
 Außerdem wurde eine lineare Regression der Form $f(x) = ax +b$ durchgeführt. Dadurch lässt sich das Saugvermögen
 $S$ durch $S = \frac{V}{p_G}\cdot a$ bestimmen. Die Turbomolekularpumpe hat dabei ein Volumen von
-$V = (33 \pm 0,1) \,\si{\liter}$. 
+$V = (33 \pm 0,1) \,\si{\liter}$. Für $p_1$ wurde die Parameter und ein Saugvermögen von
 \begin{align*}
   a &= (5,30 \pm 0,1)\cdot 10^{-5} \si{\milli\bar\per\second} \\
   p_G &= (6,00 \pm 1,80) \cdot 10^{-5} \si{\milli\bar} \\
   S &= (29 \pm 9)\,\si{\liter\per\second}
 \end{align*}
-bestimmen.
+bestimmt. Für $p_2$ wurden die Parameter und ein Saugvermögen von
+\begin{align*}
+  a &= (3,3 \pm 0,1)\cdot 10^{-4} \si{\milli\bar\per\second} \\
+  p_G &= (7,0 \pm 2,0) \cdot 10^{-5} \si{\milli\bar} \\
+  S &= (160 \pm 40)\,\si{\liter\per\second}
+\end{align*}
+bestimmt. Für $p_3$ wurden die Parameter und ein Saugvermögen von
+\begin{align*}
+  a &= (5,8 \pm 0,1)\cdot 10^{-4} \si{\milli\bar\per\second} \\
+  p_G &= (20,0 \pm 6,0) \cdot 10^{-5} \si{\milli\bar} \\
+  S &= (96 \pm 29)\,\si{\liter\per\second}
+\end{align*}
+bestimmt. Für $p_4$ wurden die Parameter und ein Saugvermögen von
+\begin{align*}
+  a &= (2,03 \pm 0,01)\cdot 10^{-3} \si{\milli\bar\per\second} \\
+  p_G &= (5,00 \pm 2,0) \cdot 10^{-5} \si{\milli\bar} \\
+  S &= (330 \pm 10)\,\si{\liter\per\second}
+\end{align*}
+bestimmt.
 
 \subsubsection{Evakuierungsmessung}
 Es wurden für den Startdruck $p_{0} \approx 5\cdot 10^{-3}\,\si{\milli\bar}$ drei Messreihen aufgenommen und

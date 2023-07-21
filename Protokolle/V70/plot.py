@@ -18,8 +18,8 @@ from uncertainties import ufloat
 #np.savetxt('content/data/drehschieber/pevakerr.txt', perr)
 
 #V = ufloat(33, 0.1)
-#p = ufloat(6, 1.8)
-#m = ufloat(5.3, 0.01)
+#p = ufloat(20e-5, 6e-5)
+#m = ufloat(2.03e-3, 0.01e-3)
 #S = (V*m)/p
 #print(S)
 
